@@ -454,5 +454,6 @@ document.querySelectorAll('img').forEach((img) => {
 
 // ─── INIT ─────────────────────────────────────────
 console.log('🏛 Château Jardin — Landing Page Oficial');
-console.log('👤 Consultoria: Corretor Coelho');
+console.log('👤 Consultoria: Corretor Coelho (CRECI 037234-J)');
 console.log('📞 Contato Oficial / WhatsApp: (11) 99691-7883');
+console.log('✉️ E-mail: contato@queroimoveis.com.br');
