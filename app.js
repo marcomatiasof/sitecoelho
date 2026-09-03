@@ -222,26 +222,217 @@ function openLazerModal(cat, title, imgSrc, desc) {
   openModal('modal-lazer');
 }
 
-// ─── PLANTA MODAL ────────────────────────────────
-function openPlantaModal(tipo, sub, img1, img2) {
-  document.getElementById('plantaModalTipo').textContent = tipo;
-  document.getElementById('plantaModalTitle').textContent = sub;
+// ─── PLANTA MODAL INTERATIVO (EXPANDIDO & ULTRA-DETALHADO) ───
+let currentPlantaZoom = 1;
+let currentPlantaIndex = 0;
+let currentPlantaImages = [];
+let isPanningPlanta = false;
+let startPanX = 0, startPanY = 0;
+let currentTranslateX = 0, currentTranslateY = 0;
 
-  const container = document.getElementById('plantaModalImgs');
-  container.innerHTML = '';
+function updatePlantaTransform() {
+  const img = document.getElementById('plantaMainImg');
+  const badge = document.getElementById('zoomLevelBadge');
+  const stage = document.getElementById('plantaStage');
+  if (!img) return;
 
-  [img1, img2].forEach((src, i) => {
-    if (src) {
-      const img = document.createElement('img');
-      img.src = src;
-      img.alt = `${tipo} - planta ${i + 1}`;
-      img.loading = 'lazy';
-      container.appendChild(img);
+  img.style.transform = `scale(${currentPlantaZoom}) translate(${currentTranslateX}px, ${currentTranslateY}px)`;
+  if (badge) {
+    badge.textContent = `${Math.round(currentPlantaZoom * 100)}%`;
+  }
+  if (stage) {
+    if (currentPlantaZoom > 1) {
+      stage.classList.add('is-zoomed');
+    } else {
+      stage.classList.remove('is-zoomed');
+      currentTranslateX = 0;
+      currentTranslateY = 0;
+      img.style.transform = `scale(1) translate(0px, 0px)`;
     }
-  });
+  }
+}
 
+function zoomPlanta(action) {
+  if (action === 'in') {
+    currentPlantaZoom = Math.min(3, +(currentPlantaZoom + 0.3).toFixed(1));
+  } else if (action === 'out') {
+    currentPlantaZoom = Math.max(1, +(currentPlantaZoom - 0.3).toFixed(1));
+    if (currentPlantaZoom === 1) {
+      currentTranslateX = 0;
+      currentTranslateY = 0;
+    }
+  } else if (action === 'reset') {
+    currentPlantaZoom = 1;
+    currentTranslateX = 0;
+    currentTranslateY = 0;
+  }
+  updatePlantaTransform();
+}
+
+function togglePlantaZoom() {
+  if (currentPlantaZoom === 1) {
+    currentPlantaZoom = 1.8;
+  } else {
+    currentPlantaZoom = 1;
+    currentTranslateX = 0;
+    currentTranslateY = 0;
+  }
+  updatePlantaTransform();
+}
+
+function selectPlantaVariant(index) {
+  if (!currentPlantaImages[index]) return;
+  currentPlantaIndex = index;
+  currentPlantaZoom = 1;
+  currentTranslateX = 0;
+  currentTranslateY = 0;
+
+  const mainImg = document.getElementById('plantaMainImg');
+  if (mainImg) {
+    mainImg.style.opacity = '0';
+    setTimeout(() => {
+      mainImg.src = currentPlantaImages[index].url;
+      mainImg.alt = currentPlantaImages[index].title;
+      mainImg.style.opacity = '1';
+      updatePlantaTransform();
+    }, 150);
+  }
+
+  document.querySelectorAll('.planta-tab-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
+  });
+  document.querySelectorAll('.planta-thumb-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', i === index);
+  });
+}
+
+function openPlantaModal(tipo, sub, arg1, arg2) {
+  let images = [];
+  if (Array.isArray(arg1)) {
+    images = arg1;
+  } else {
+    if (arg1) images.push({ title: 'Planta Padrão', url: arg1 });
+    if (arg2) images.push({ title: 'Opção Living Integrado', url: arg2 });
+  }
+
+  currentPlantaImages = images;
+  currentPlantaIndex = 0;
+  currentPlantaZoom = 1;
+  currentTranslateX = 0;
+  currentTranslateY = 0;
+
+  const tipoElem = document.getElementById('plantaModalTipo');
+  const titleElem = document.getElementById('plantaModalTitle');
+  if (tipoElem) tipoElem.textContent = tipo;
+  if (titleElem) titleElem.textContent = sub;
+
+  // Build Tabs
+  const tabsContainer = document.getElementById('plantaModalTabs');
+  if (tabsContainer) {
+    tabsContainer.innerHTML = '';
+    images.forEach((item, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `planta-tab-btn ${idx === 0 ? 'active' : ''}`;
+      btn.innerHTML = `<span style="font-size:1.1rem;line-height:1;">📐</span> ${item.title}`;
+      btn.onclick = () => selectPlantaVariant(idx);
+      tabsContainer.appendChild(btn);
+    });
+  }
+
+  // Build Thumbnails
+  const thumbsContainer = document.getElementById('plantaThumbnailsBar');
+  if (thumbsContainer) {
+    thumbsContainer.innerHTML = '';
+    if (images.length > 1) {
+      images.forEach((item, idx) => {
+        const thumbBtn = document.createElement('button');
+        thumbBtn.type = 'button';
+        thumbBtn.className = `planta-thumb-btn ${idx === 0 ? 'active' : ''}`;
+        thumbBtn.innerHTML = `
+          <img src="${item.url}" alt="${item.title}" loading="lazy">
+          <span>${item.title}</span>
+        `;
+        thumbBtn.onclick = () => selectPlantaVariant(idx);
+        thumbsContainer.appendChild(thumbBtn);
+      });
+      thumbsContainer.style.display = 'flex';
+    } else {
+      thumbsContainer.style.display = 'none';
+    }
+  }
+
+  // Set Main Image
+  const mainImg = document.getElementById('plantaMainImg');
+  if (mainImg && images[0]) {
+    mainImg.src = images[0].url;
+    mainImg.alt = images[0].title;
+    mainImg.style.opacity = '1';
+  }
+
+  // WhatsApp CTA
+  const wppBtn = document.getElementById('plantaWppBtn');
+  if (wppBtn) {
+    const empNome = getEmpreendimentoNome();
+    const msg = encodeURIComponent(`Olá! Tenho interesse na planta ${tipo} (${sub}) do ${empNome}. Gostaria de receber o material completo em PDF com valores.`);
+    wppBtn.href = `https://wa.me/5511996917883?text=${msg}`;
+  }
+
+  updatePlantaTransform();
   openModal('modal-planta');
 }
+
+function agendarVisitaPlanta() {
+  const tipo = document.getElementById('plantaModalTipo')?.textContent || '';
+  closeModal('modal-planta');
+  openModal('modal-visita');
+  setTimeout(() => {
+    const select = document.querySelector('#modal-visita select[name="tipologia"]');
+    if (select && tipo) {
+      for (let opt of select.options) {
+        if (opt.value.toLowerCase().includes(tipo.toLowerCase())) {
+          select.value = opt.value;
+          break;
+        }
+      }
+    }
+  }, 120);
+}
+
+// Mouse Drag & Wheel Panning para o visualizador de plantas
+document.addEventListener('DOMContentLoaded', () => {
+  const stage = document.getElementById('plantaStage');
+  if (stage) {
+    stage.addEventListener('mousedown', (e) => {
+      if (currentPlantaZoom > 1) {
+        isPanningPlanta = true;
+        startPanX = e.clientX - currentTranslateX;
+        startPanY = e.clientY - currentTranslateY;
+        e.preventDefault();
+      }
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isPanningPlanta) return;
+      currentTranslateX = e.clientX - startPanX;
+      currentTranslateY = e.clientY - startPanY;
+      updatePlantaTransform();
+    });
+
+    window.addEventListener('mouseup', () => {
+      isPanningPlanta = false;
+    });
+
+    stage.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      if (e.deltaY < 0) {
+        zoomPlanta('in');
+      } else {
+        zoomPlanta('out');
+      }
+    }, { passive: false });
+  }
+});
 
 // ─── TOUR VIRTUAL ────────────────────────────────
 function startTour() {
