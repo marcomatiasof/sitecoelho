@@ -1507,6 +1507,7 @@ textarea, input, select { font-family: inherit; }
   grid-template-columns: 1fr 1fr;
   padding: 0;
   max-width: 800px;
+}
 /* .modal-box.modal-planta-detail styled below in interactive viewer section */
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(40px); }
@@ -1592,34 +1593,54 @@ textarea, input, select { font-family: inherit; }
 .lazer-modal-info { padding: 40px; display: flex; flex-direction: column; justify-content: center; gap: 16px; }
 .lazer-modal-info h2 { font-family: var(--font-serif); font-size: 1.6rem; color: var(--wine-dark); }
 .lazer-modal-info p { color: var(--text-light); line-height: 1.7; }
-/* ─── INTERACTIVE PLANTA VIEWER (EXPANDED LUXURY VIEWER) ─── */
+/* ─── INTERACTIVE PLANTA VIEWER (EXPANDED FULLSCREEN LUXURY STUDIO) ─── */
 .modal-box.modal-planta-detail {
-  max-width: 1180px;
-  width: 95vw;
-  max-height: 94vh;
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(201, 168, 76, 0.25);
+  max-width: min(1380px, 96vw) !important;
+  width: 96vw !important;
+  max-height: 94vh !important;
+  height: 92vh !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+  background: #140f0b !important;
+  color: var(--cream) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.75) !important;
+  border: 1px solid rgba(201, 168, 76, 0.35) !important;
+  position: relative;
+}
+
+.modal-box.modal-planta-detail .modal-close {
+  top: 18px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--cream);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  z-index: 20;
+}
+.modal-box.modal-planta-detail .modal-close:hover {
+  background: var(--wine);
+  color: var(--white);
+  border-color: var(--wine-light);
+  transform: rotate(90deg);
 }
 
 .planta-modal-header {
-  padding: 24px 32px 18px;
+  padding: 18px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 16px;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.18);
-  background: #fdfbf7;
+  gap: 14px;
+  background: #1a130e;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  z-index: 10;
 }
 
 .pm-info .modal-label {
-  margin-bottom: 4px;
+  display: inline-block;
+  margin-bottom: 3px;
   color: var(--gold);
   font-size: 0.72rem;
   letter-spacing: 0.18em;
@@ -1630,19 +1651,20 @@ textarea, input, select { font-family: inherit; }
 .pm-info h2 {
   font-family: var(--font-serif);
   font-size: 1.55rem;
-  color: var(--wine-dark);
+  color: #fff;
   font-weight: 600;
   margin: 0;
+  line-height: 1.2;
 }
 
-/* Tabs */
+/* Interactive Tabs */
 .planta-modal-tabs {
   display: flex;
   gap: 8px;
-  background: rgba(107, 31, 42, 0.06);
+  background: rgba(0, 0, 0, 0.4);
   padding: 4px;
   border-radius: 30px;
-  border: 1px solid rgba(107, 31, 42, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.25);
 }
 
 .planta-tab-btn {
@@ -1650,35 +1672,37 @@ textarea, input, select { font-family: inherit; }
   border: none;
   padding: 8px 18px;
   border-radius: 24px;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 600;
-  color: var(--text);
+  color: rgba(248, 245, 240, 0.75);
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.25s ease;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .planta-tab-btn:hover {
-  color: var(--wine);
+  color: var(--gold-light);
+  background: rgba(201, 168, 76, 0.1);
 }
 
 .planta-tab-btn.active {
-  background: var(--wine-dark);
-  color: var(--white);
-  box-shadow: 0 4px 12px rgba(107, 31, 42, 0.25);
+  background: linear-gradient(135deg, var(--gold) 0%, #a8832a 100%);
+  color: #120e0a;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(201, 168, 76, 0.35);
 }
 
-/* Zoom controls */
+/* Zoom Toolbar */
 .planta-zoom-controls {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: var(--white);
-  padding: 4px 8px;
-  border-radius: 20px;
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 10px;
+  border-radius: 24px;
+  border: 1px solid rgba(201, 168, 76, 0.25);
 }
 
 .zoom-btn {
@@ -1691,39 +1715,39 @@ textarea, input, select { font-family: inherit; }
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--text);
+  color: rgba(248, 245, 240, 0.85);
   transition: var(--transition);
 }
 
 .zoom-btn:hover {
-  background: var(--cream);
-  color: var(--wine);
+  background: rgba(201, 168, 76, 0.2);
+  color: var(--gold-light);
+  transform: scale(1.1);
 }
 
 .zoom-level-badge {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-light);
   padding: 2px 6px;
-  min-width: 44px;
+  min-width: 48px;
   text-align: center;
 }
 
-/* Stage Wrapper */
+/* Stage Canvas */
 .planta-stage-wrapper {
   position: relative;
-  background: radial-gradient(circle at center, #ffffff 40%, #f4eee3 100%);
+  flex: 1;
+  min-height: 0;
+  background: #0d0a07;
+  background-image: 
+    radial-gradient(rgba(201, 168, 76, 0.08) 1.5px, transparent 1.5px),
+    linear-gradient(180deg, rgba(20, 15, 11, 0.4) 0%, rgba(13, 10, 7, 0.9) 100%);
+  background-size: 28px 28px, 100% 100%;
   overflow: hidden;
-  height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (max-height: 850px) {
-  .planta-stage-wrapper {
-    height: 440px;
-  }
 }
 
 .planta-stage {
@@ -1734,6 +1758,7 @@ textarea, input, select { font-family: inherit; }
   justify-content: center;
   cursor: zoom-in;
   user-select: none;
+  padding: 20px;
 }
 
 .planta-stage.is-zoomed {
@@ -1745,12 +1770,15 @@ textarea, input, select { font-family: inherit; }
 }
 
 #plantaMainImg {
-  max-width: 95%;
-  max-height: 92%;
+  max-width: 92%;
+  max-height: 90%;
   object-fit: contain;
-  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(201, 168, 76, 0.25);
+  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s ease;
   transform-origin: center center;
-  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.08));
 }
 
 .planta-hint-badge {
@@ -1758,25 +1786,27 @@ textarea, input, select { font-family: inherit; }
   bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(26, 16, 8, 0.75);
-  backdrop-filter: blur(8px);
-  color: var(--cream);
-  font-size: 0.75rem;
-  padding: 6px 16px;
+  background: rgba(20, 15, 11, 0.85);
+  backdrop-filter: blur(10px);
+  color: rgba(248, 245, 240, 0.9);
+  font-size: 0.78rem;
+  padding: 6px 18px;
   border-radius: 20px;
   pointer-events: none;
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  border: 1px solid rgba(201, 168, 76, 0.35);
   letter-spacing: 0.02em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Thumbnails bar */
+/* Thumbnails Bar */
 .planta-thumbnails-bar {
   display: flex;
-  gap: 16px;
-  padding: 12px 32px;
-  background: #fdfbf7;
-  border-top: 1px solid rgba(201, 168, 76, 0.15);
+  gap: 14px;
+  padding: 10px 28px;
+  background: #17110c;
+  border-top: 1px solid rgba(201, 168, 76, 0.18);
   justify-content: center;
+  z-index: 5;
 }
 
 .planta-thumb-btn {
@@ -1784,18 +1814,19 @@ textarea, input, select { font-family: inherit; }
   align-items: center;
   gap: 10px;
   padding: 6px 14px;
-  background: var(--white);
-  border: 1.5px solid rgba(201, 168, 76, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(201, 168, 76, 0.2);
   border-radius: 12px;
   cursor: pointer;
   transition: var(--transition);
+  color: rgba(248, 245, 240, 0.85);
 }
 
 .planta-thumb-btn img {
-  width: 48px;
-  height: 36px;
+  width: 44px;
+  height: 32px;
   object-fit: contain;
-  background: #faf8f5;
+  background: #ffffff;
   border-radius: 6px;
   padding: 2px;
 }
@@ -1803,27 +1834,28 @@ textarea, input, select { font-family: inherit; }
 .planta-thumb-btn span {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--text);
 }
 
 .planta-thumb-btn:hover,
 .planta-thumb-btn.active {
   border-color: var(--gold);
-  background: #fdf8eb;
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(201, 168, 76, 0.15);
+  box-shadow: 0 4px 14px rgba(201, 168, 76, 0.25);
 }
 
 /* Footer & Actions */
 .planta-modal-footer {
-  padding: 18px 32px 24px;
+  padding: 16px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
-  background: var(--white);
-  border-top: 1px solid rgba(201, 168, 76, 0.12);
+  background: #1a130e;
+  border-top: 1px solid rgba(201, 168, 76, 0.2);
+  z-index: 10;
 }
 
 .planta-specs-pill {
@@ -1833,8 +1865,8 @@ textarea, input, select { font-family: inherit; }
 }
 
 .planta-specs-pill span {
-  font-size: 0.78rem;
-  color: var(--text-light);
+  font-size: 0.8rem;
+  color: rgba(248, 245, 240, 0.7);
   font-weight: 500;
 }
 
@@ -1845,25 +1877,40 @@ textarea, input, select { font-family: inherit; }
 }
 
 .planta-modal-actions .btn-primary {
-  padding: 14px 28px;
+  padding: 13px 26px;
   font-size: 0.88rem;
+  border-radius: 30px;
 }
 
 .planta-modal-actions .btn-outline-gold {
-  padding: 13px 22px;
+  padding: 12px 22px;
   font-size: 0.84rem;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  border-radius: 30px;
+  border-color: var(--gold);
+  color: var(--gold-light);
+  background: rgba(201, 168, 76, 0.08);
 }
 
-@media (max-width: 768px) {
-  .planta-modal-header { padding: 18px 20px; }
-  .pm-info h2 { font-size: 1.25rem; }
-  .planta-stage-wrapper { height: 340px; }
-  .planta-thumbnails-bar { padding: 10px 16px; gap: 8px; }
-  .planta-modal-footer { padding: 16px 20px; flex-direction: column; align-items: stretch; }
+.planta-modal-actions .btn-outline-gold:hover {
+  background: var(--gold);
+  color: #120e0a;
+}
+
+@media (max-width: 900px) {
+  .modal-box.modal-planta-detail {
+    width: 98vw !important;
+    height: 96vh !important;
+    max-height: 96vh !important;
+    border-radius: 14px !important;
+  }
+  .planta-modal-header { padding: 14px 18px; }
+  .pm-info h2 { font-size: 1.2rem; }
+  .planta-thumbnails-bar { padding: 8px 14px; gap: 8px; }
+  .planta-modal-footer { padding: 14px 18px; flex-direction: column; align-items: stretch; }
   .planta-modal-actions { flex-direction: column; width: 100%; }
   .planta-modal-actions .btn-primary,
   .planta-modal-actions .btn-outline-gold { width: 100%; text-align: center; justify-content: center; }
