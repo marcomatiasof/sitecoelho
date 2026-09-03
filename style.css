@@ -1009,6 +1009,229 @@ textarea, input, select { font-family: inherit; }
   margin-bottom: 20px;
 }
 
+/* ─── VIP LEAD CAPTURE PLANTAS (SUBPRODUTOS) ─── */
+.plantas-grid.vip-grid {
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 28px;
+}
+.planta-card-vip {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-color: rgba(201, 168, 76, 0.25);
+  background: #ffffff;
+  padding: 26px 24px;
+}
+.planta-card-vip:hover {
+  border-color: var(--gold);
+  box-shadow: 0 16px 36px rgba(201, 168, 76, 0.15), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.planta-vip-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--wine-dark);
+  margin-bottom: 10px;
+  line-height: 1.4;
+  min-height: 42px;
+}
+.planta-blueprint-schematic {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: radial-gradient(circle at 50% 50%, #162438 0%, #0c1524 100%);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 24px 16px;
+  margin: 16px 0 20px;
+  min-height: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.planta-card-vip:hover .planta-blueprint-schematic {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+}
+.schematic-blueprint-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(201, 168, 76, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 168, 76, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  opacity: 0.8;
+}
+.schematic-center {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.schematic-cad-icon {
+  color: var(--gold);
+  filter: drop-shadow(0 2px 8px rgba(201, 168, 76, 0.4));
+  transition: transform 0.3s ease;
+}
+.planta-card-vip:hover .schematic-cad-icon {
+  transform: scale(1.1);
+}
+.schematic-cad-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+.schematic-cad-sub {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.schematic-badge-pill {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: rgba(201, 168, 76, 0.18);
+  color: var(--gold-light);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+}
+.planta-vip-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+.btn-planta-wpp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 18px;
+  background: #25D366;
+  color: #ffffff !important;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.28);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-planta-wpp:hover {
+  background: #20ba59;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.38);
+  color: #ffffff !important;
+}
+.btn-planta-subtle {
+  background: transparent;
+  border: 1px solid rgba(107, 31, 42, 0.2);
+  color: var(--wine);
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+.btn-planta-subtle:hover {
+  background: var(--wine);
+  color: #ffffff;
+  border-color: var(--wine);
+}
+.plantas-vip-concierge {
+  margin-top: 48px;
+  background: linear-gradient(135deg, #1f1519 0%, #150e12 100%);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 36px 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  box-shadow: var(--shadow-lg);
+}
+.pvc-left {
+  flex: 1;
+}
+.pvc-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.12);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+.pvc-left h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+.pvc-left p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  max-width: 620px;
+}
+.pvc-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+.wpp-highlight {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3) !important;
+  text-align: center;
+  padding: 14px 28px !important;
+}
+.wpp-highlight:hover {
+  background: #20ba59 !important;
+  border-color: #20ba59 !important;
+  transform: translateY(-2px) !important;
+}
+@media (max-width: 900px) {
+  .plantas-vip-concierge {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+  .pvc-left p {
+    margin: 0 auto;
+  }
+  .pvc-right {
+    width: 100%;
+  }
+  .pvc-right a, .pvc-right button {
+    width: 100%;
+  }
+}
+
 /* ─── SIGNATURE ─── */
 .signature { position: relative; min-height: 80vh; display: flex; align-items: center; }
 .signature-bg {
