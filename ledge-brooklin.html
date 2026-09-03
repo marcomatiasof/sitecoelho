@@ -637,60 +637,79 @@
     </div>
   </div>
 
-  <!-- MODAL PLANTA INTERATIVO (EXPANDIDO & ULTRA-DETALHADO) -->
+  <!-- MODAL STUDIO DE PLANTAS INTERATIVO (WIDESCREEN THEATER ARCHITECTURAL STUDIO) -->
   <div class="modal-overlay" id="modal-planta" onclick="closeModalOutside(event,this)">
     <div class="modal-box modal-planta-detail">
-      <button class="modal-close" onclick="closeModal('modal-planta')" aria-label="Fechar">&#10005;</button>
-
-      <!-- HEADER COM INFORMAÇÕES E CONTROLES INTERATIVOS -->
-      <div class="planta-modal-header">
-        <div class="pm-info">
-          <span class="modal-label" id="plantaModalTipo">Ledge Brooklin</span>
-          <h2 id="plantaModalTitle">Tipologia Exclusiva</h2>
+      <!-- PAINEL ESQUERDO: CANVAS DA PLANTA EM TELA CHEIA -->
+      <div class="planta-canvas-pane">
+        <!-- Top Bar do Canvas -->
+        <div class="canvas-top-bar">
+          <div class="canvas-title-wrap">
+            <span class="canvas-tag">Ledge Brooklin</span>
+            <span class="canvas-title" id="canvasPlantaTitle">Ledge Brooklin &#8212; Planta Arquitet&#244;nica</span>
+          </div>
+          <!-- Controles de Zoom -->
+          <div class="canvas-zoom-dock">
+            <button type="button" class="dock-btn" onclick="zoomPlanta('in')" title="Aumentar Zoom">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </button>
+            <button type="button" class="dock-btn" onclick="zoomPlanta('out')" title="Diminuir Zoom">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </button>
+            <button type="button" class="dock-btn" onclick="zoomPlanta('reset')" title="Redefinir Tamanho">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+            </button>
+            <span class="dock-badge" id="zoomLevelBadge">100%</span>
+          </div>
         </div>
 
-        <!-- TABS INTERATIVAS DE VARIAÇÃO DE PLANTA -->
-        <div class="planta-modal-tabs" id="plantaModalTabs"></div>
-
-        <!-- CONTROLES INTERATIVOS DE ZOOM -->
-        <div class="planta-zoom-controls">
-          <button class="zoom-btn" onclick="zoomPlanta('in')" title="Aumentar Zoom (Zoom In)">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-          </button>
-          <button class="zoom-btn" onclick="zoomPlanta('out')" title="Diminuir Zoom (Zoom Out)">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-          </button>
-          <button class="zoom-btn" onclick="zoomPlanta('reset')" title="Tamanho Original">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
-          </button>
-          <span class="zoom-level-badge" id="zoomLevelBadge">100%</span>
-        </div>
-      </div>
-
-      <!-- PALCO DE VISUALIZAÇÃO INTERATIVA DA PLANTA -->
-      <div class="planta-stage-wrapper" id="plantaStageWrapper">
-        <div class="planta-stage" id="plantaStage" onclick="togglePlantaZoom()">
-          <img id="plantaMainImg" src="" alt="Planta Arquitetônica em Alta Resolução" draggable="false">
-        </div>
-        <div class="planta-hint-badge">
-          <span>💡 Dê 1 clique para Zoom (1.8x) ou use os botões acima</span>
+        <!-- Palco do Canvas com Pan & Drag -->
+        <div class="canvas-stage-area" id="plantaStage" onclick="togglePlantaZoom()">
+          <img id="plantaMainImg" src="" alt="Planta Arquitet&#244;nica" draggable="false">
+          <div class="canvas-hint-pill">
+            <span>&#128161; Clique na planta para Zoom (1.8x) ou arraste para explorar os ambientes</span>
+          </div>
         </div>
       </div>
 
-      <!-- MINIATURAS INTERATIVAS / SELEÇÃO RÁPIDA -->
-      <div class="planta-thumbnails-bar" id="plantaThumbnailsBar"></div>
+      <!-- PAINEL DIREITO: CONTROLE, VARIAÇÕES & ESPECIFICAÇÕES -->
+      <div class="planta-sidebar-pane">
+        <button class="modal-close-sidebar" onclick="closeModal('modal-planta')" aria-label="Fechar">&#10005;</button>
 
-      <!-- RODAPÉ COM ESPECIFICAÇÕES E AÇÕES -->
-      <div class="planta-modal-footer">
-        <div class="planta-specs-pill" id="plantaSpecsPill">
-          <span>&#10003; Hall Social Privativo</span>
-          <span>&#10003; Terra&#231;o Gourmet Integrado</span>
-          <span>&#10003; Su&#237;te Master com Closet</span>
-          <span>&#10003; Consultoria Quero Im&#243;veis J&#225;</span>
+        <div class="sidebar-header">
+          <span class="sidebar-label" id="plantaModalTipo">Ledge Brooklin</span>
+          <h2 class="sidebar-metragem" id="sidebarMetragem">70, 80 e 122 m&#178;</h2>
+          <p class="sidebar-suites" id="plantaModalTitle">1 a 3 Su&#237;tes &#183; 1 ou 2 Vagas</p>
         </div>
-        <div class="planta-modal-actions">
-          <a href="#" id="plantaWppBtn" target="_blank" rel="noopener" class="btn-outline-gold">&#128172; Solicitar Book em PDF no WhatsApp</a>
-          <button class="btn-primary" onclick="agendarVisitaPlanta()">Agendar Visita para Esta Planta</button>
+
+        <!-- SELEÇÃO DE LAYOUTS (CARDS INTERATIVOS) -->
+        <div class="sidebar-section">
+          <span class="sidebar-section-title">Op&#231;&#245;es de Layout Dispon&#237;veis:</span>
+          <div class="sidebar-variant-cards" id="plantaModalTabs">
+            <!-- Gerado via JS -->
+          </div>
+        </div>
+
+        <!-- DIFERENCIAIS ARQUITETÔNICOS -->
+        <div class="sidebar-section">
+          <span class="sidebar-section-title">Diferenciais da Planta:</span>
+          <ul class="sidebar-specs-list" id="sidebarSpecsList">
+            <li><span>&#10003;</span> Hall social privativo com controle biom&#233;trico</li>
+            <li><span>&#10003;</span> Living integrado com ampla varanda gourmet</li>
+            <li><span>&#10003;</span> Su&#237;te master com closet generoso e banho Sr. e Sra.</li>
+            <li><span>&#10003;</span> Ventila&#231;&#227;o e ilumina&#231;&#227;o natural em todos os ambientes</li>
+            <li><span>&#10003;</span> Consultoria exclusiva Quero Im&#243;veis J&#225;</li>
+          </ul>
+        </div>
+
+        <!-- AÇÕES VIP -->
+        <div class="sidebar-actions">
+          <button class="btn-primary btn-block" onclick="agendarVisitaPlanta()">
+            Agendar Visita para Esta Planta &#8594;
+          </button>
+          <a href="#" id="plantaWppBtn" target="_blank" rel="noopener" class="btn-whatsapp-block">
+            <span>&#128172;</span> Solicitar Planta em PDF &amp; Valores
+          </a>
         </div>
       </div>
     </div>

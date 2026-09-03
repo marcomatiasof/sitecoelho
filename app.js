@@ -288,20 +288,24 @@ function selectPlantaVariant(index) {
   currentTranslateY = 0;
 
   const mainImg = document.getElementById('plantaMainImg');
+  const canvasTitle = document.getElementById('canvasPlantaTitle');
+  const item = currentPlantaImages[index];
+
+  if (canvasTitle) {
+    canvasTitle.textContent = `${item.tipo || ''} — ${item.title}`;
+  }
+
   if (mainImg) {
     mainImg.style.opacity = '0';
     setTimeout(() => {
-      mainImg.src = currentPlantaImages[index].url;
-      mainImg.alt = currentPlantaImages[index].title;
+      mainImg.src = item.url;
+      mainImg.alt = item.title;
       mainImg.style.opacity = '1';
       updatePlantaTransform();
     }, 150);
   }
 
-  document.querySelectorAll('.planta-tab-btn').forEach((btn, i) => {
-    btn.classList.toggle('active', i === index);
-  });
-  document.querySelectorAll('.planta-thumb-btn').forEach((btn, i) => {
+  document.querySelectorAll('.variant-card-btn').forEach((btn, i) => {
     btn.classList.toggle('active', i === index);
   });
 }
@@ -309,10 +313,10 @@ function selectPlantaVariant(index) {
 function openPlantaModal(tipo, sub, arg1, arg2) {
   let images = [];
   if (Array.isArray(arg1)) {
-    images = arg1;
+    images = arg1.map(it => ({ ...it, tipo }));
   } else {
-    if (arg1) images.push({ title: 'Planta Padrão', url: arg1 });
-    if (arg2) images.push({ title: 'Opção Living Integrado', url: arg2 });
+    if (arg1) images.push({ title: 'Planta Padrão', url: arg1, tipo });
+    if (arg2) images.push({ title: 'Opção Living Integrado', url: arg2, tipo });
   }
 
   currentPlantaImages = images;
@@ -321,45 +325,41 @@ function openPlantaModal(tipo, sub, arg1, arg2) {
   currentTranslateX = 0;
   currentTranslateY = 0;
 
-  const tipoElem = document.getElementById('plantaModalTipo');
-  const titleElem = document.getElementById('plantaModalTitle');
-  if (tipoElem) tipoElem.textContent = tipo;
-  if (titleElem) titleElem.textContent = sub;
+  // Extract metragem number from tipo or sub
+  const metragemMatch = tipo.match(/\d+[\.,]?\d*/);
+  const metragemNum = metragemMatch ? metragemMatch[0] : '';
+  const tipoNome = tipo.replace(/\d+[\.,]?\d*\s*m²?/i, '').trim();
 
-  // Build Tabs
+  const tipoElem = document.getElementById('plantaModalTipo');
+  const metragemElem = document.getElementById('sidebarMetragem');
+  const titleElem = document.getElementById('plantaModalTitle');
+  const canvasTitle = document.getElementById('canvasPlantaTitle');
+
+  if (tipoElem) tipoElem.textContent = tipoNome || tipo;
+  if (metragemElem) metragemElem.innerHTML = metragemNum ? `${metragemNum}<span>m²</span>` : tipo;
+  if (titleElem) titleElem.textContent = sub;
+  if (canvasTitle && images[0]) {
+    canvasTitle.textContent = `${tipo} — ${images[0].title}`;
+  }
+
+  // Build Interactive Variant Cards in Sidebar
   const tabsContainer = document.getElementById('plantaModalTabs');
   if (tabsContainer) {
     tabsContainer.innerHTML = '';
     images.forEach((item, idx) => {
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = `planta-tab-btn ${idx === 0 ? 'active' : ''}`;
-      btn.innerHTML = `<span style="font-size:1.1rem;line-height:1;">📐</span> ${item.title}`;
+      btn.className = `variant-card-btn ${idx === 0 ? 'active' : ''}`;
+      btn.innerHTML = `
+        <img src="${item.url}" alt="${item.title}" loading="lazy">
+        <div class="variant-card-info">
+          <strong>${item.title}</strong>
+          <span>Opção ${idx + 1} · Clique para exibir no palco</span>
+        </div>
+      `;
       btn.onclick = () => selectPlantaVariant(idx);
       tabsContainer.appendChild(btn);
     });
-  }
-
-  // Build Thumbnails
-  const thumbsContainer = document.getElementById('plantaThumbnailsBar');
-  if (thumbsContainer) {
-    thumbsContainer.innerHTML = '';
-    if (images.length > 1) {
-      images.forEach((item, idx) => {
-        const thumbBtn = document.createElement('button');
-        thumbBtn.type = 'button';
-        thumbBtn.className = `planta-thumb-btn ${idx === 0 ? 'active' : ''}`;
-        thumbBtn.innerHTML = `
-          <img src="${item.url}" alt="${item.title}" loading="lazy">
-          <span>${item.title}</span>
-        `;
-        thumbBtn.onclick = () => selectPlantaVariant(idx);
-        thumbsContainer.appendChild(thumbBtn);
-      });
-      thumbsContainer.style.display = 'flex';
-    } else {
-      thumbsContainer.style.display = 'none';
-    }
   }
 
   // Set Main Image
@@ -374,7 +374,7 @@ function openPlantaModal(tipo, sub, arg1, arg2) {
   const wppBtn = document.getElementById('plantaWppBtn');
   if (wppBtn) {
     const empNome = getEmpreendimentoNome();
-    const msg = encodeURIComponent(`Olá! Tenho interesse na planta ${tipo} (${sub}) do ${empNome}. Gostaria de receber o material completo em PDF com valores.`);
+    const msg = encodeURIComponent(`Olá! Tenho interesse na planta ${tipo} (${sub}) do ${empNome}. Gostaria de receber a planta em PDF com tabela de valores.`);
     wppBtn.href = `https://wa.me/5511996917883?text=${msg}`;
   }
 
