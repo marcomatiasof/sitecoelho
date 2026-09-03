@@ -154,7 +154,14 @@ function openModal(id) {
   // Play video when modal opens
   if (id === 'modal-video') {
     const video = document.getElementById('local-video');
-    if (video) video.play();
+    if (video) {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay was prevented by browser policy; user can click play button on controls
+        });
+      }
+    }
   }
 }
 
@@ -166,7 +173,9 @@ function closeModal(id) {
   // Stop video when closing
   if (id === 'modal-video') {
     const video = document.getElementById('local-video');
-    if (video) video.pause();
+    if (video) {
+      video.pause();
+    }
   }
 
   // Check if any other modal is open
@@ -277,9 +286,9 @@ function handleSubmitWpp(event) {
   const tel = document.getElementById('wpp-tel')?.value || '';
 
   const msg = encodeURIComponent(
-    `Olá! Sou ${nome}, tenho interesse no Château Jardin. Meu telefone: ${tel}`
+    `Olá, Coelho! Sou ${nome}, tenho interesse no Château Jardin. Meu telefone: ${tel}`
   );
-  const url = `https://wa.me/551147102220?text=${msg}`;
+  const url = `https://wa.me/5511996917883?text=${msg}`;
 
   setTimeout(() => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -369,6 +378,6 @@ document.querySelectorAll('img').forEach((img) => {
 });
 
 // ─── INIT ─────────────────────────────────────────
-console.log('🏛 Château Jardin — Landing Page carregada com sucesso!');
-console.log('📍 R. Min. Nelson Hungria, 400 – Cidade Jardim, São Paulo');
-console.log('📞 Vendas: (11) 4710-2220');
+console.log('🏛 Château Jardin — Landing Page Oficial');
+console.log('👤 Consultoria: Corretor Coelho');
+console.log('📞 Contato Oficial / WhatsApp: (11) 99691-7883');
