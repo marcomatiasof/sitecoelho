@@ -19,8 +19,8 @@ Write-Host "Adicionando todos os arquivos..."
 Write-Host "Criando o commit (salvando as mudanças)..."
 & $gitPath commit -m "🚀 Deploy inicial automático da Landing Page Château Jardin"
 
-Write-Host "Enviando para o GitHub (push)..."
-Write-Host "ATENÇÃO: Pode aparecer uma janela pedindo para você logar na sua conta do GitHub." -ForegroundColor Yellow
-& $gitPath push -u origin main --force
+Write-Host "Enviando para o GitHub (https://github.com/marcomatiasof/sitecoelho)..." -ForegroundColor Cyan
+Write-Host "Pode aparecer uma janela no seu navegador para você confirmar o login do GitHub." -ForegroundColor Yellow
+& git push -u origin main
 
-Write-Host "Pronto! Acesse seu GitHub e veja se os arquivos estão lá." -ForegroundColor Green
+Write-Host "Concluído com sucesso! Verifique em https://github.com/marcomatiasof/sitecoelho" -ForegroundColor Green
