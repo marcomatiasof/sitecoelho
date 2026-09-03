@@ -250,7 +250,7 @@ function startTour() {
 }
 
 // ─── CONFIGURAÇÃO DE NOTIFICAÇÃO ────────────────
-const NOTIFICATION_EMAIL = 'contato@coelhoconsultoriamob.com.br';
+const NOTIFICATION_EMAIL = 'contato@queroimoveis.com.br';
 
 // ─── FORMULÁRIOS COM AUTOMAÇÃO DE E-MAIL ────────
 async function handleSubmit(event, context) {
