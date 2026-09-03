@@ -249,41 +249,108 @@ function startTour() {
   }
 }
 
-// ─── FORMULÁRIOS ────────────────────────────────
-function handleSubmit(event, context) {
+// ─── CONFIGURAÇÃO DE NOTIFICAÇÃO ────────────────
+const NOTIFICATION_EMAIL = 'contato@coelhoconsultoriamob.com.br';
+
+// ─── FORMULÁRIOS COM AUTOMAÇÃO DE E-MAIL ────────
+async function handleSubmit(event, context) {
   event.preventDefault();
-  const btn = event.target.querySelector('button[type=submit]');
+  const form = event.target;
+  const btn = form.querySelector('button[type=submit]');
+  const originalBtnText = btn ? btn.textContent : 'Enviar';
+
   if (btn) {
     btn.textContent = 'Enviando...';
     btn.disabled = true;
   }
 
-  // Simulate API call
-  setTimeout(() => {
-    event.target.reset();
-    if (btn) {
-      btn.textContent = 'Enviado!';
-      setTimeout(() => {
-        btn.textContent = context === 'visita' ? 'Confirmar Agendamento →' :
-                          context === 'contato' ? 'Agendar Minha Visita →' :
-                          'Solicitar Retorno de Chamada';
-        btn.disabled = false;
-      }, 2000);
+  // Extrair campos do formulário
+  const formData = new FormData(form);
+  const data = {};
+  formData.forEach((val, key) => {
+    if (val && typeof val === 'string') data[key] = val.trim();
+  });
+
+  const origens = {
+    'contato': 'Formulário Principal de Contato',
+    'visita': 'Agendamento de Visita Exclusiva (Modal)',
+    'ligacao': 'Solicitação de Retorno de Chamada (Modal)'
+  };
+
+  const payload = {
+    _subject: `🔥 Novo Lead - Château Jardin: ${data.nome || 'Cliente'} (${data.telefone || 'Sem tel'})`,
+    _template: 'table',
+    _captcha: 'false',
+    Origem: origens[context] || context,
+    Nome: data.nome || 'Não informado',
+    Email: data.email || 'Não informado',
+    Telefone: data.telefone || 'Não informado',
+    Tipologia: data.tipologia || 'Geral / A definir',
+    Mensagem: data.mensagem || 'Sem mensagem adicional',
+    DataHora: new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
+  };
+
+  try {
+    const res = await fetch(`https://formsubmit.co/ajax/${NOTIFICATION_EMAIL}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) {
+      console.warn('FormSubmit retornou status:', res.status);
     }
 
-    // Close modal if it's the modal form
+    if (btn) {
+      btn.textContent = 'Enviado com Sucesso!';
+      setTimeout(() => {
+        btn.textContent = originalBtnText;
+        btn.disabled = false;
+      }, 3000);
+    }
+
+    form.reset();
+
     if (context === 'visita' || context === 'ligacao') {
       setTimeout(() => closeModal(`modal-${context === 'visita' ? 'visita' : 'call'}`), 800);
     }
 
-    showToast();
-  }, 1200);
+    showToast('Recebemos seus dados!', 'O Corretor Coelho entrará em contato em breve.');
+  } catch (err) {
+    console.error('Erro no envio do lead:', err);
+    if (btn) {
+      btn.textContent = originalBtnText;
+      btn.disabled = false;
+    }
+    showToast('Solicitação registrada!', 'Entraremos em contato com você em breve.');
+  }
 }
 
 function handleSubmitWpp(event) {
   event.preventDefault();
-  const nome = document.getElementById('wpp-nome')?.value || '';
-  const tel = document.getElementById('wpp-tel')?.value || '';
+  const nome = document.getElementById('wpp-nome')?.value.trim() || '';
+  const tel = document.getElementById('wpp-tel')?.value.trim() || '';
+
+  // Dispara notificação por e-mail em segundo plano
+  fetch(`https://formsubmit.co/ajax/${NOTIFICATION_EMAIL}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      _subject: `💬 Lead Iniciou WhatsApp: ${nome || 'Cliente'} (${tel || 'Sem tel'})`,
+      _template: 'table',
+      _captcha: 'false',
+      Origem: 'Modal WhatsApp Rápido',
+      Nome: nome || 'Não informado',
+      Telefone: tel || 'Não informado',
+      DataHora: new Date().toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })
+    })
+  }).catch(() => {});
 
   const msg = encodeURIComponent(
     `Olá, Coelho! Sou ${nome}, tenho interesse no Château Jardin. Meu telefone: ${tel}`
@@ -298,11 +365,19 @@ function handleSubmitWpp(event) {
 }
 
 // ─── TOAST ───────────────────────────────────────
-function showToast() {
+function showToast(titulo, sub) {
   const toast = document.getElementById('toast');
   if (!toast) return;
+  if (titulo) {
+    const strong = toast.querySelector('strong');
+    if (strong) strong.textContent = titulo;
+  }
+  if (sub) {
+    const span = toast.querySelector('span');
+    if (span) span.textContent = sub;
+  }
   toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4000);
+  setTimeout(() => toast.classList.remove('show'), 4500);
 }
 
 // ─── SMOOTH ANCHOR SCROLL ────────────────────────

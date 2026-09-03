@@ -640,15 +640,15 @@
                   name="telefone" placeholder="(11) 99999-9999" required></div>
             </div>
             <div class="form-group"><label for="c-int">Tipologia de interesse</label>
-              <select id="c-int">
+              <select id="c-int" name="tipologia">
                 <option value="">Selecione...</option>
-                <option value="h185">Harmonie 185m&#178; &#8211; 3 Su&#237;tes</option>
-                <option value="h215">Harmonie 215m&#178; &#8211; 3/4 Su&#237;tes</option>
-                <option value="h248">Harmonie 248m&#178; &#8211; 4 Su&#237;tes</option>
-                <option value="l355">Lumi&#232;re 355m&#178; &#8211; Premium</option>
+                <option value="Harmonie 185m² – 3 Suítes">Harmonie 185m&#178; &#8211; 3 Su&#237;tes</option>
+                <option value="Harmonie 215m² – 3/4 Suítes">Harmonie 215m&#178; &#8211; 3/4 Su&#237;tes</option>
+                <option value="Harmonie 248m² – 4 Suítes">Harmonie 248m&#178; &#8211; 4 Su&#237;tes</option>
+                <option value="Lumière 355m² – Premium">Lumi&#232;re 355m&#178; &#8211; Premium</option>
               </select>
             </div>
-            <div class="form-group"><label for="c-msg">Mensagem</label><textarea id="c-msg" rows="3"
+            <div class="form-group"><label for="c-msg">Mensagem</label><textarea id="c-msg" name="mensagem" rows="3"
                 placeholder="Quando prefere visitar? Alguma d&#250;vida?"></textarea></div>
             <div class="form-check"><input type="checkbox" id="c-lgpd" required><label for="c-lgpd">Autorizo contato
                 conforme a <button type="button" onclick="openModal('modal-privacidade')"
@@ -774,17 +774,17 @@
         <p>Nossa equipe entra em contato em at&#233; 1 hora &#250;til.</p>
       </div>
       <form onsubmit="handleSubmit(event,'visita')">
-        <div class="form-group"><label>Nome *</label><input type="text" placeholder="Seu nome completo" required></div>
+        <div class="form-group"><label>Nome *</label><input type="text" name="nome" placeholder="Seu nome completo" required></div>
         <div class="form-row two">
-          <div class="form-group"><label>E-mail *</label><input type="email" placeholder="seu@email.com" required></div>
-          <div class="form-group"><label>WhatsApp *</label><input type="tel" placeholder="(11) 99999-9999" required>
+          <div class="form-group"><label>E-mail *</label><input type="email" name="email" placeholder="seu@email.com" required></div>
+          <div class="form-group"><label>WhatsApp *</label><input type="tel" name="telefone" placeholder="(11) 99999-9999" required>
           </div>
         </div>
-        <div class="form-group"><label>Tipologia</label><select>
-            <option>Harmonie 185m&#178;</option>
-            <option>Harmonie 215m&#178;</option>
-            <option>Harmonie 248m&#178;</option>
-            <option>Lumi&#232;re 355m&#178;</option>
+        <div class="form-group"><label>Tipologia</label><select name="tipologia">
+            <option value="Harmonie 185m²">Harmonie 185m&#178;</option>
+            <option value="Harmonie 215m²">Harmonie 215m&#178;</option>
+            <option value="Harmonie 248m²">Harmonie 248m&#178;</option>
+            <option value="Lumière 355m²">Lumi&#232;re 355m&#178;</option>
           </select></div>
         <div class="form-check"><input type="checkbox" id="m-lgpd" required><label for="m-lgpd">Autorizo contato
             conforme a Pol&#237;tica de Privacidade.</label></div>
@@ -858,9 +858,9 @@
       </div>
       <hr class="modal-divider">
       <form onsubmit="handleSubmit(event,'ligacao')">
-        <div class="form-group"><label>Deixe seu n&#250;mero para retorno:</label><input type="tel"
+        <div class="form-group"><label>Deixe seu n&#250;mero para retorno:</label><input type="tel" name="telefone"
             placeholder="(11) 99999-9999" required></div>
-        <div class="form-group"><input type="text" placeholder="Seu nome"></div>
+        <div class="form-group"><label>Seu nome:</label><input type="text" name="nome" placeholder="Seu nome completo" required></div>
         <button type="submit" class="btn-submit">Solicitar Retorno de Chamada</button>
       </form>
     </div>
