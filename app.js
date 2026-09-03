@@ -326,7 +326,7 @@ async function handleSubmit(event, context) {
       setTimeout(() => closeModal(`modal-${context === 'visita' ? 'visita' : 'call'}`), 800);
     }
 
-    showToast('Recebemos seus dados!', 'O Corretor Coelho entrará em contato em breve.');
+    showToast('Recebemos seus dados!', 'A equipe Quero Im&#243;veis J&#225; entrar&#225; em contato em breve.');
   } catch (err) {
     console.error('Erro no envio do lead:', err);
     if (btn) {
@@ -363,7 +363,7 @@ function handleSubmitWpp(event) {
   }).catch(() => {});
 
   const msg = encodeURIComponent(
-    `Olá, Coelho! Sou ${nome}, tenho interesse no ${empNome}. Meu telefone: ${tel}`
+    `Olá! Sou ${nome}, tenho interesse no ${empNome}. Meu telefone: ${tel}`
   );
   const url = `https://wa.me/5511996917883?text=${msg}`;
 
@@ -464,6 +464,6 @@ document.querySelectorAll('img').forEach((img) => {
 
 // ─── INIT ─────────────────────────────────────────
 console.log('🏛 Château Jardin — Landing Page Oficial');
-console.log('👤 Consultoria: Corretor Coelho (CRECI 037234-J)');
+console.log('🏢 Consultoria: Quero Imóveis Já (CRECI 037234-J)');
 console.log('📞 Contato Oficial / WhatsApp: (11) 99691-7883');
 console.log('✉️ E-mail: contato@queroimoveisja.com.br');
