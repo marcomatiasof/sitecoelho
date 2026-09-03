@@ -1,4 +1,4 @@
-﻿$out = [System.IO.StreamWriter]::new("$PSScriptRoot\index.html", $false, [System.Text.Encoding]::UTF8)
+$out = [System.IO.StreamWriter]::new("$PSScriptRoot\index.html", $false, [System.Text.Encoding]::UTF8)
 function W($s){ $out.WriteLine($s) }
 
 W '<!DOCTYPE html>'
@@ -331,8 +331,7 @@ W '        <div class="loc-icon">&#128205;</div>'
 W '        <div><strong>Ch&#226;teau Jardin</strong><p>R. Min. Nelson Hungria, 400<br>Cidade Jardim &#8211; S&#227;o Paulo, SP<br>CEP 05690-050</p></div>'
 W '      </div>'
 W '      <div class="loc-btns">'
-W '        <a href="https://www.google.com/maps/search/R.+Min.+Nelson+Hungria%2C+400+Cidade+Jardim+SP" target="_blank" rel="noopener" class="btn-maps gmaps">&#128506; Google Maps</a>'
-W '        <a href="https://waze.com/ul?q=R.+Min.+Nelson+Hungria+400+Cidade+Jardim+SP" target="_blank" rel="noopener" class="btn-maps waze">&#128663; Waze</a>'
+W '        <a href="https://www.google.com/maps/search/R.+Min.+Nelson+Hungria%2C+400+Cidade+Jardim+SP" target="_blank" rel="noopener" class="btn-maps gmaps">&#128506; Abrir no Google Maps</a>'
 W '      </div>'
 W '      <div class="loc-region-imgs">'
 W '        <img src="assets/images/cidade-jardim.jpg" alt="Cidade Jardim Sao Paulo" loading="lazy">'
