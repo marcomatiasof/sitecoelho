@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Only Cidade Jardim — Cidade Jardim, São Paulo | Quero Im&#243;veis J&#225;</title>
+  <title>Only Cidade Jardim &#8212; Cidade Jardim, São Paulo | Quero Im&#243;veis J&#225;</title>
   <meta name="description"
     content="O Only Cidade Jardim é um verdadeiro oásis urbano. Plantas amplas de 186 a 252 m² com 4 suítes, cercadas por um parque aquático privativo e áreas de lazer estilo resort, pronto para você se mudar imediatamente. Atendimento exclusivo com Quero Im&#243;veis J&#225; (CRECI 037234-J).">
-  <meta property="og:title" content="Only Cidade Jardim — Exclusividade com Quero Im&#243;veis J&#225;">
+  <meta property="og:title" content="Only Cidade Jardim &#8212; Exclusividade com Quero Im&#243;veis J&#225;">
   <meta property="og:description"
     content="Exclusividade e lazer resort prontos para morar no Cidade Jardim. Atendimento personalizado com Quero Im&#243;veis J&#225;.">
   <meta property="og:image" content="https://oportunidades.exto.com.br/midias/only-cidade-jardim/featured/full/EMPREENDIMENTO-ONLY-DESKTOP-25-1080w.webp">
@@ -25,7 +25,7 @@
     <div class="header-inner">
       <div class="header-logo">
         <a href="index.html" style="text-decoration:none;color:inherit;">
-          <span class="logo-text">ONLY CIDADE JARDIM</span>
+          <span class="logo-text">ONLY <em>CIDADE JARDIM</em></span>
         </a>
         <span class="logo-sub">Por Quero Im&#243;veis J&#225; &#8211; CRECI 037234-J</span>
       </div>
@@ -54,19 +54,19 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION (PADRÃO 1-PARA-1 COM CHÂTEAU JARDIN) -->
   <section class="hero" id="hero">
     <div class="hero-slides" id="heroSlides">
       <div class="hero-slide active" style="background-image:url('https://oportunidades.exto.com.br/midias/only-cidade-jardim/featured/full/EMPREENDIMENTO-ONLY-DESKTOP-25-1080w.webp')"></div>
       <div class="hero-slide" style="background-image:url('https://oportunidades.exto.com.br/midias/only-cidade-jardim/destaque/full/EMPREENDIMENTO-ONLY-DESKTOP-14.jpg')"></div>
       <div class="hero-slide" style="background-image:url('https://oportunidades.exto.com.br/midias/only-cidade-jardim/galeria/full/EMPREENDIMENTO-ONLY-DESKTOP-15.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('https://oportunidades.exto.com.br/midias/only-cidade-jardim/galeria/full/EMPREENDIMENTO-ONLY-DESKTOP-16.jpg')"></div>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="badge-lancamento">&#10006; Pronto para Morar</span>
+      <span class="badge-lancamento">&#10006; PRONTO PARA MORAR</span>
       <h1 class="hero-title">Only <em>Cidade Jardim</em></h1>
-      <p class="hero-tagline">Exclusividade e lazer resort prontos para morar no Cidade Jardim</p>
-      <p class="hero-address">Av. Duquesa de Goiás, 825 - Cidade Jardim, São Paulo - SP</p>
+      <p class="hero-address">AV. DUQUESA DE GOI&#193;S, 825 &#183; CIDADE JARDIM, S&#195;O PAULO &#8211; SP</p>
       <div class="hero-features">
         <div class="hero-feat">
           <span class="feat-icon">&#127963;</span>
@@ -85,97 +85,64 @@
       </div>
       <div class="hero-actions">
         <button class="btn-hero-primary" onclick="openModal('modal-visita')">Agendar Visita Exclusiva</button>
-        <a href="https://wa.me/5511996917883?text=Ol%C3%A1%21+Tenho+interesse+no+Only%20Cidade%20Jardim." target="_blank" rel="noopener" class="btn-hero-outline">&#128172; Falar no WhatsApp</a>
+        <a href="#sobre" class="btn-hero-outline">Conhe&#231;a o Projeto</a>
       </div>
+    </div>
+    <div class="hero-dots" id="heroDots">
+      <button class="dot active" onclick="goToSlide(0)"></button>
+      <button class="dot" onclick="goToSlide(1)"></button>
+      <button class="dot" onclick="goToSlide(2)"></button>
+      <button class="dot" onclick="goToSlide(3)"></button>
     </div>
     <div class="hero-scroll-hint"><span>Role para descobrir</span>
       <div class="scroll-arrow"></div>
     </div>
   </section>
 
-  <!-- SOBRE / CONCEITO -->
+  <!-- SOBRE / CONCEITO (PADRÃO CHÂTEAU JARDIN) -->
   <section class="section sobre" id="sobre">
     <div class="container">
       <div class="sobre-grid">
-        <div class="sobre-image-col reveal">
-          <div class="sobre-img-wrap">
-            <img src="https://oportunidades.exto.com.br/midias/only-cidade-jardim/featured/full/EMPREENDIMENTO-ONLY-DESKTOP-25-1080w.webp" alt="Only Cidade Jardim - Fachada" loading="lazy" class="img-main">
-            <div class="sobre-accent-badge">
-              <span class="sab-title">Pronto para Morar</span>
-              <span class="sab-sub">Cidade Jardim, São Paulo</span>
-            </div>
-          </div>
-        </div>
-        <div class="sobre-text-col reveal">
-          <span class="section-label">Conceito Exclusivo</span>
-          <h2 class="section-title">A uni&#227;o perfeita de<br><em>luxo, espa&#231;o e bem-estar</em></h2>
-          <div class="title-bar"></div>
-          <p class="lead-text">O Only Cidade Jardim é um verdadeiro oásis urbano. Plantas amplas de 186 a 252 m² com 4 suítes, cercadas por um parque aquático privativo e áreas de lazer estilo resort, pronto para você se mudar imediatamente.</p>
+        <div class="sobre-text reveal">
+          <span class="section-label">O Conceito</span>
+          <h2 class="section-title">A eleg&#226;ncia atemporal<br>em cada detalhe</h2>
+          <p>O Only Cidade Jardim é um verdadeiro oásis urbano. Plantas amplas de 186 a 252 m² com 4 suítes, cercadas por um parque aquático privativo e áreas de lazer estilo resort, pronto para você se mudar imediatamente.</p>
           <p>
-            Com arquitetura de refer&#234;ncia internacional e acabamentos primorosos, cada detalhe do <strong>Only Cidade Jardim</strong> foi concebido para proporcionar o m&#225;ximo conforto e valoriza&#231;&#227;o patrimonial duradoura.
+            Com arquitetura de refer&#234;ncia e acabamentos primorosos, cada ambiente do <strong>Only Cidade Jardim</strong> reflete uma curadoria precisa de conforto, privacidade e valoriza&#231;&#227;o patrimonial duradoura.
           </p>
           <div class="sobre-pills">
             <div class="pill"><span>&#10003;</span> Torre &#218;nica e Exclusiva</div>
             <div class="pill"><span>&#10003;</span> Hall Social Privativo</div>
             <div class="pill"><span>&#10003;</span> Seguran&#231;a 24h Especializada</div>
-            <div class="pill"><span>&#10003;</span> Consultoria Quero Im&#243;veis J&#225; (CRECI 037234-J)</div>
+            <div class="pill"><span>&#10003;</span> Assessoria Quero Im&#243;veis J&#225; (CRECI 037234-J)</div>
           </div>
           <div class="sobre-cta">
             <button class="btn-primary" onclick="openModal('modal-visita')">Solicitar Book Completo</button>
             <button class="btn-outline" onclick="openModal('modal-ficha')">Ver Ficha T&#233;cnica</button>
           </div>
         </div>
+        <div class="sobre-images reveal">
+          <div class="img-stack">
+            <img src="https://oportunidades.exto.com.br/midias/only-cidade-jardim/featured/full/EMPREENDIMENTO-ONLY-DESKTOP-25-1080w.webp" alt="Only Cidade Jardim - Fachada" loading="lazy" class="img-main">
+            <img src="https://oportunidades.exto.com.br/midias/only-cidade-jardim/destaque/full/EMPREENDIMENTO-ONLY-DESKTOP-14.jpg" alt="Only Cidade Jardim - Destaque" loading="lazy" class="img-accent">
+          </div>
+          <div class="img-stat-bar">
+            <div class="stat"><strong>186 a 252 m²</strong><span>Privativos</span></div>
+            <div class="stat-sep"></div>
+            <div class="stat"><strong>4 Suítes</strong><span>Dormit&#243;rios</span></div>
+            <div class="stat-sep"></div>
+            <div class="stat"><strong>3 a 4 Vagas</strong><span>Garagem</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- LAZER E DIFERENCIAIS -->
-  <section class="section diferenciais" id="lazer">
-    <div class="container">
-      <span class="section-label center reveal">Estrutura Resort</span>
-      <h2 class="section-title center reveal">Lazer incompar&#225;vel para<br><em>momentos memor&#225;veis</em></h2>
-      <div class="title-bar center"></div>
-      <div class="diferenciais-grid">
-        <div class="diferencial-card reveal">
-          <div class="dif-icon">&#10022;</div>
-          <h3>Complexo Aquático Estilo Resort</h3>
-          <p>Piscinas adultas e infantis com deck molhado e bangalôs privativos.</p>
-        </div>
-        <div class="diferencial-card reveal">
-          <div class="dif-icon">&#10022;</div>
-          <h3>Quadra de Tênis em Saibro</h3>
-          <p>Superfície oficial com iluminação noturna para seus jogos.</p>
-        </div>
-        <div class="diferencial-card reveal">
-          <div class="dif-icon">&#10022;</div>
-          <h3>Pronto para Morar</h3>
-          <p>Condomínio entregue e consolidado com alto padrão construtivo.</p>
-        </div>
-        <div class="diferencial-card reveal">
-          <div class="dif-icon">&#10022;</div>
-          <h3>Fitness Center Completo</h3>
-          <p>Sala de musculação e pilates com vista para o jardim.</p>
-        </div>
-        <div class="diferencial-card reveal">
-          <div class="dif-icon">&#10022;</div>
-          <h3>Lobby Monumental</h3>
-          <p>Decoração imponente assinada por designers renomados.</p>
-        </div>
-        <div class="diferencial-card reveal">
-          <div class="dif-icon">&#10022;</div>
-          <h3>Localização Estratégica</h3>
-          <p>Próximo à Marginal Pinheiros, Ponte Estaiada e Shopping Cidade Jardim.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERIA -->
+  <!-- GALERIA DE PERSPECTIVAS -->
   <section class="section galeria" id="galeria">
     <div class="container">
-      <span class="section-label reveal">Perspectivas</span>
-      <h2 class="section-title center reveal">Imagens e Ambientes de Alto Padr&#227;o</h2>
+      <span class="section-label reveal">Galeria de Imagens</span>
+      <h2 class="section-title center reveal">Um cen&#225;rio que inspira a cada olhar</h2>
     </div>
     <div class="carousel-wrapper reveal">
       <div class="carousel-track" id="galTrack">
@@ -209,8 +176,50 @@
         </div>
 
       </div>
-      <button class="carousel-btn prev" onclick="scrollCarousel('galTrack','prev')" aria-label="Anterior">&#8249;</button>
-      <button class="carousel-btn next" onclick="scrollCarousel('galTrack','next')" aria-label="Proximo">&#8250;</button>
+      <button class="carousel-btn prev" onclick="moveCarousel('galTrack','prev')" aria-label="Anterior">&#8249;</button>
+      <button class="carousel-btn next" onclick="moveCarousel('galTrack','next')" aria-label="Pr&#243;ximo">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- LAZER E DIFERENCIAIS (PADRÃO CHÂTEAU JARDIN) -->
+  <section class="section diferenciais" id="lazer">
+    <div class="container">
+      <span class="section-label center reveal">Estrutura Resort</span>
+      <h2 class="section-title light center reveal">&#193;reas de Lazer e Diferenciais Exclusivos</h2>
+      <div class="title-bar center"></div>
+      <div class="dif-grid">
+        <div class="dif-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h4>Complexo Aquático Estilo Resort</h4>
+          <p>Piscinas adultas e infantis com deck molhado e bangalôs privativos.</p>
+        </div>
+        <div class="dif-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h4>Quadra de Tênis em Saibro</h4>
+          <p>Superfície oficial com iluminação noturna para seus jogos.</p>
+        </div>
+        <div class="dif-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h4>Pronto para Morar</h4>
+          <p>Condomínio entregue e consolidado com alto padrão construtivo.</p>
+        </div>
+        <div class="dif-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h4>Fitness Center Completo</h4>
+          <p>Sala de musculação e pilates com vista para o jardim.</p>
+        </div>
+        <div class="dif-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h4>Lobby Monumental</h4>
+          <p>Decoração imponente assinada por designers renomados.</p>
+        </div>
+        <div class="dif-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h4>Localização Estratégica</h4>
+          <p>Próximo à Marginal Pinheiros, Ponte Estaiada e Shopping Cidade Jardim.</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -220,11 +229,14 @@
       <span class="section-label center reveal">Tipologias Inteligentes</span>
       <h2 class="section-title center reveal">Plantas Projetadas com Excel&#234;ncia</h2>
       <div class="title-bar center"></div>
-      <div class="plantas-grid reveal" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:24px;margin-top:40px;">
-        <div class="planta-card" style="background:var(--white);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--cream-dark);box-shadow:var(--shadow);">
-          <span style="font-size:0.75rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;">Pronto para Morar</span>
-          <h3 style="font-family:var(--font-serif);font-size:1.6rem;color:var(--wine-dark);margin:10px 0;">186 a 252 m²</h3>
-          <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:20px;">4 Suítes &#183; 3 a 4 Vagas &#183; Amplo Living com Integra&#231;&#227;o Gourmet</p>
+      <div class="plantas-grid reveal" style="grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="planta-card featured">
+          <div class="planta-header">
+            <span class="planta-tipo">PRONTO PARA MORAR</span>
+            <span class="planta-badge destaque">Exclusivo</span>
+          </div>
+          <div class="planta-metragem">186 a 252 m²</div>
+          <p class="planta-detalhes">4 Suítes &#183; 3 a 4 Vagas &#183; Amplo Living Integrado</p>
           <ul style="list-style:none;padding:0;margin:0 0 24px;color:var(--text);font-size:0.88rem;display:flex;flex-direction:column;gap:8px;">
             <li>&#10003; Su&#237;te Master com espa&#231;o para closet</li>
             <li>&#10003; Hall privativo com leitura biom&#233;trica</li>
@@ -233,17 +245,26 @@
           </ul>
           <button class="btn-primary" style="width:100%;" onclick="openModal('modal-visita')">Solicitar Planta Detalhada</button>
         </div>
-        <div class="planta-card" style="background:var(--wine-dark);border-radius:var(--radius-lg);padding:32px;color:var(--white);box-shadow:var(--shadow-lg);">
-          <span style="font-size:0.75rem;font-weight:700;color:var(--gold-light);text-transform:uppercase;letter-spacing:0.1em;">Personaliza&#231;&#227;o</span>
-          <h3 style="font-family:var(--font-serif);font-size:1.6rem;color:var(--white);margin:10px 0;">Consultoria Personalizada</h3>
-          <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;margin-bottom:20px;">Consulte op&#231;&#245;es de plantas decoradas e disponibilidades atualizadas em tempo real com Quero Im&#243;veis J&#225;.</p>
-          <a href="https://wa.me/5511996917883?text=Ol%C3%A1%21+Gostaria+de+receber+as+plantas+do+Only%20Cidade%20Jardim." target="_blank" rel="noopener" class="btn-secondary" style="width:100%;display:inline-block;text-align:center;">Falar com Quero Im&#243;veis J&#225;</a>
+        <div class="planta-card premium">
+          <div class="planta-header">
+            <span class="planta-tipo">Personaliza&#231;&#227;o</span>
+            <span class="planta-badge premium-badge">Assessoria VIP</span>
+          </div>
+          <div class="planta-metragem">Plantas <span>Decoradas</span></div>
+          <p class="planta-detalhes">Op&#231;&#245;es com living estendido e su&#237;te master ampliada</p>
+          <ul style="list-style:none;padding:0;margin:0 0 24px;color:var(--text);font-size:0.88rem;display:flex;flex-direction:column;gap:8px;">
+            <li>&#10003; Tabela de pre&#231;os atualizada em tempo real</li>
+            <li>&#10003; An&#225;lise de fluxo de pagamento direto</li>
+            <li>&#10003; Atendimento com especialista dedicado</li>
+            <li>&#10003; Visita agendada com hora marcada</li>
+          </ul>
+          <a href="https://wa.me/5511996917883?text=Ol%C3%A1%21+Gostaria+de+receber+as+plantas+do+Only%20Cidade%20Jardim." target="_blank" rel="noopener" class="btn-hero-primary" style="width:100%;justify-content:center;">Falar com Especialista</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FORMULÁRIO DE CONTATO -->
+  <!-- FORMULÁRIO DE CONTATO (PADRÃO CHÂTEAU JARDIN) -->
   <section class="section contato" id="contato">
     <div class="container">
       <div class="contato-grid">
@@ -415,13 +436,13 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (PADRÃO CHÂTEAU JARDIN) -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <span class="logo-text">ONLY CIDADE JARDIM</span>
+            <span class="logo-text">ONLY <em>CIDADE JARDIM</em></span>
             <p>Exclusividade residencial em Cidade Jardim, São Paulo. Consultoria e atendimento exclusivo com Quero Im&#243;veis J&#225; &#8212; CRECI 037234-J.</p>
             <div class="footer-socials">
               <a href="https://wa.me/5511996917883" target="_blank" rel="noopener" class="fs-link" title="WhatsApp">&#128172;</a>
@@ -462,7 +483,7 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p class="footer-disclaimer">* Informa&#231;&#245;es preliminares sujeitas a modifica&#231;&#245;es sem aviso pr&#233;vio. Imagens meramente ilustrativas. P&#225;gina de divulga&#231;&#227;o e consultoria pessoal dQuero Im&#243;veis J&#225; &#8211; CRECI 037234-J.</p>
+        <p class="footer-disclaimer">* Informa&#231;&#245;es preliminares sujeitas a modifica&#231;&#245;es sem aviso pr&#233;vio. Imagens meramente ilustrativas. P&#225;gina de divulga&#231;&#227;o e consultoria pessoal da Quero Im&#243;veis J&#225; &#8211; CRECI 037234-J.</p>
         <div class="footer-legal">
           <span>&#169; 2026 Quero Im&#243;veis J&#225; &#8211; CRECI 037234-J. Todos os direitos reservados.</span>
           <button onclick="openModal('modal-privacidade')" class="link-privacy-footer">Pol&#237;tica de Privacidade</button>
@@ -573,7 +594,7 @@
         <h2>Pol&#237;tica de Privacidade</h2>
       </div>
       <div class="privacy-content">
-        <p>A Quero Im&#243;veis J&#225; respeita a sua privacidade e est&#225; comprometido com a prote&#231;&#227;o de seus dados pessoais, em conformidade com a Lei Geral de Prote&#231;&#227;o de Dados Pessoais (Lei n&#186; 13.709/2018 &#8211; LGPD).</p>
+        <p>A Quero Im&#243;veis J&#225; respeita a sua privacidade e est&#225; comprometida com a prote&#231;&#227;o de seus dados pessoais, em conformidade com a Lei Geral de Prote&#231;&#227;o de Dados Pessoais (Lei n&#186; 13.709/2018 &#8211; LGPD).</p>
         <h4>Dados Coletados</h4>
         <p>Coletamos nome, e-mail e telefone exclusivamente para fins de atendimento e consultoria imobili&#225;ria sobre o empreendimento Only Cidade Jardim.</p>
         <h4>Finalidade do Tratamento</h4>
