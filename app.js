@@ -252,12 +252,17 @@ function startTour() {
 // ─── CONFIGURAÇÃO DE NOTIFICAÇÃO ────────────────
 const NOTIFICATION_EMAIL = 'contato@queroimoveisja.com.br';
 
+function getEmpreendimentoNome() {
+  return document.body.dataset.empreendimento || 'Château Jardin';
+}
+
 // ─── FORMULÁRIOS COM AUTOMAÇÃO DE E-MAIL ────────
 async function handleSubmit(event, context) {
   event.preventDefault();
   const form = event.target;
   const btn = form.querySelector('button[type=submit]');
   const originalBtnText = btn ? btn.textContent : 'Enviar';
+  const empNome = getEmpreendimentoNome();
 
   if (btn) {
     btn.textContent = 'Enviando...';
@@ -278,9 +283,10 @@ async function handleSubmit(event, context) {
   };
 
   const payload = {
-    _subject: `🔥 Novo Lead - Château Jardin: ${data.nome || 'Cliente'} (${data.telefone || 'Sem tel'})`,
+    _subject: `🔥 Novo Lead - ${empNome}: ${data.nome || 'Cliente'} (${data.telefone || 'Sem tel'})`,
     _template: 'table',
     _captcha: 'false',
+    Empreendimento: empNome,
     Origem: origens[context] || context,
     Nome: data.nome || 'Não informado',
     Email: data.email || 'Não informado',
@@ -333,6 +339,7 @@ function handleSubmitWpp(event) {
   event.preventDefault();
   const nome = document.getElementById('wpp-nome')?.value.trim() || '';
   const tel = document.getElementById('wpp-tel')?.value.trim() || '';
+  const empNome = getEmpreendimentoNome();
 
   // Dispara notificação por e-mail em segundo plano
   fetch(`https://formsubmit.co/ajax/${NOTIFICATION_EMAIL}`, {
@@ -342,9 +349,10 @@ function handleSubmitWpp(event) {
       'Accept': 'application/json'
     },
     body: JSON.stringify({
-      _subject: `💬 Lead Iniciou WhatsApp: ${nome || 'Cliente'} (${tel || 'Sem tel'})`,
+      _subject: `💬 Lead Iniciou WhatsApp - ${empNome}: ${nome || 'Cliente'} (${tel || 'Sem tel'})`,
       _template: 'table',
       _captcha: 'false',
+      Empreendimento: empNome,
       Origem: 'Modal WhatsApp Rápido',
       Nome: nome || 'Não informado',
       Telefone: tel || 'Não informado',
@@ -353,7 +361,7 @@ function handleSubmitWpp(event) {
   }).catch(() => {});
 
   const msg = encodeURIComponent(
-    `Olá, Coelho! Sou ${nome}, tenho interesse no Château Jardin. Meu telefone: ${tel}`
+    `Olá, Coelho! Sou ${nome}, tenho interesse no ${empNome}. Meu telefone: ${tel}`
   );
   const url = `https://wa.me/5511996917883?text=${msg}`;
 

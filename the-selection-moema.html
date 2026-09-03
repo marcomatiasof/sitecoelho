@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Selection Moema — Moema, São Paulo | Corretor Coelho</title>
+  <meta name="description"
+    content="Localizado em um dos endereços mais cobiçados de Moema, o The Selection traz plantas de 170 m² meticulosamente desenhadas com ventilação cruzada, living integrado e acabamentos de altíssimo padrão. Atendimento exclusivo com o Corretor Coelho (CRECI 037234-J).">
+  <meta property="og:title" content="The Selection Moema — Exclusividade com Corretor Coelho">
+  <meta property="og:description"
+    content="O novo ícone de elegância e exclusividade em Moema. Atendimento personalizado com o Corretor Coelho.">
+  <meta property="og:image" content="https://oportunidades.exto.com.br/midias/the-selection-moema/featured/full/Portico-2-1080w.webp">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-empreendimento="The Selection Moema">
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <div class="header-logo">
+        <a href="index.html" style="text-decoration:none;color:inherit;">
+          <span class="logo-text">THE SELECTION MOEMA</span>
+        </a>
+        <span class="logo-sub">Por Corretor Coelho &#8211; CRECI 037234-J</span>
+      </div>
+      <nav class="header-nav">
+        <a href="#sobre">Conceito</a>
+        <a href="#lazer">Lazer</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#plantas">Plantas</a>
+        <a href="#outros">Portf&#243;lio</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="header-cta">
+        <a href="https://wa.me/5511996917883?text=Ol%C3%A1%2C+Coelho%21+Gostaria+de+informa%C3%A7%C3%B5es+sobre+o+The%20Selection%20Moema." target="_blank" rel="noopener" class="btn-phone">&#128172; (11) 99691-7883</a>
+        <button class="btn-primary" onclick="openModal('modal-visita')">Agendar Visita</button>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#sobre" onclick="toggleMenu()">Conceito</a>
+      <a href="#lazer" onclick="toggleMenu()">Lazer</a>
+      <a href="#galeria" onclick="toggleMenu()">Galeria</a>
+      <a href="#plantas" onclick="toggleMenu()">Plantas</a>
+      <a href="#outros" onclick="toggleMenu()">Portf&#243;lio</a>
+      <a href="#contato" onclick="toggleMenu()">Contato</a>
+      <button class="btn-primary" onclick="openModal('modal-visita');toggleMenu()">Agendar Visita</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-slides" id="heroSlides">
+      <div class="hero-slide active" style="background-image:url('https://oportunidades.exto.com.br/midias/the-selection-moema/featured/full/Portico-2-1080w.webp')"></div>
+      <div class="hero-slide" style="background-image:url('https://oportunidades.exto.com.br/midias/the-selection-moema/galeria/full/Gourmet-Tennis.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('https://oportunidades.exto.com.br/midias/the-selection-moema/destaque/full/Piscina-coberta-25m-com-raia.jpg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        <span>Lançamento &#183; Moema, São Paulo</span>
+      </div>
+      <h1 class="hero-title reveal">
+        <span>The Selection Moema</span>
+        <em>O novo ícone de elegância e exclusividade em Moema</em>
+      </h1>
+      <p class="hero-subtitle reveal">
+        Apartamentos de alto padr&#227;o com 170 m², 3 Suítes e 2 a 3 Vagas. Viva o privil&#233;gio do atendimento exclusivo com o Corretor Coelho.
+      </p>
+      <div class="hero-actions reveal">
+        <button class="btn-primary" onclick="openModal('modal-visita')">Agendar Visita Exclusiva</button>
+        <a href="https://wa.me/5511996917883?text=Ol%C3%A1%2C+Coelho%21+Tenho+interesse+no+The%20Selection%20Moema." target="_blank" rel="noopener" class="btn-secondary">&#128172; Falar no WhatsApp</a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><strong>170 m²</strong><span>Privativos</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><strong>3 Suítes</strong><span>Dormit&#243;rios</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><strong>2 a 3 Vagas</strong><span>Garagem</span></div>
+        <div class="stat-sep"></div>
+        <div class="stat"><strong>Lançamento</strong><span>Est&#225;gio</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="mouse-icon"></div>
+      <span>Role para explorar</span>
+    </div>
+  </section>
+
+  <!-- SOBRE / CONCEITO -->
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-image-col reveal">
+          <div class="sobre-img-wrap">
+            <img src="https://oportunidades.exto.com.br/midias/the-selection-moema/featured/full/Portico-2-1080w.webp" alt="The Selection Moema - Fachada" loading="lazy" class="img-main">
+            <div class="sobre-accent-badge">
+              <span class="sab-title">Lançamento</span>
+              <span class="sab-sub">Moema, São Paulo</span>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-text-col reveal">
+          <span class="section-label">Conceito Exclusivo</span>
+          <h2 class="section-title">A uni&#227;o perfeita de<br><em>luxo, espa&#231;o e bem-estar</em></h2>
+          <div class="title-bar"></div>
+          <p class="lead-text">Localizado em um dos endereços mais cobiçados de Moema, o The Selection traz plantas de 170 m² meticulosamente desenhadas com ventilação cruzada, living integrado e acabamentos de altíssimo padrão.</p>
+          <p>
+            Com arquitetura de refer&#234;ncia internacional e acabamentos primorosos, cada detalhe do <strong>The Selection Moema</strong> foi concebido para proporcionar o m&#225;ximo conforto e valoriza&#231;&#227;o patrimonial duradoura.
+          </p>
+          <div class="sobre-pills">
+            <div class="pill"><span>&#10003;</span> Torre &#218;nica e Exclusiva</div>
+            <div class="pill"><span>&#10003;</span> Hall Social Privativo</div>
+            <div class="pill"><span>&#10003;</span> Seguran&#231;a 24h Especializada</div>
+            <div class="pill"><span>&#10003;</span> Consultoria Corretor Coelho (CRECI 037234-J)</div>
+          </div>
+          <div class="sobre-cta">
+            <button class="btn-primary" onclick="openModal('modal-visita')">Solicitar Book Completo</button>
+            <button class="btn-outline" onclick="openModal('modal-ficha')">Ver Ficha T&#233;cnica</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAZER E DIFERENCIAIS -->
+  <section class="section diferenciais" id="lazer">
+    <div class="container">
+      <span class="section-label center reveal">Estrutura Resort</span>
+      <h2 class="section-title center reveal">Lazer incompar&#225;vel para<br><em>momentos memor&#225;veis</em></h2>
+      <div class="title-bar center"></div>
+      <div class="diferenciais-grid">
+        <div class="diferencial-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h3>Pórtico Monumental</h3>
+          <p>Arquitetura clássica revisitada com iluminação cênica noturna.</p>
+        </div>
+        <div class="diferencial-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h3>Quadra de Tênis de Saibro</h3>
+          <p>Exclusividade esportiva em pleno coração de Moema.</p>
+        </div>
+        <div class="diferencial-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h3>Piscina Coberta 25m</h3>
+          <p>Raia de natação com controle térmico e deck molhado.</p>
+        </div>
+        <div class="diferencial-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h3>Gourmet Tennis Lounge</h3>
+          <p>Espaço gourmet privativo anexo à quadra de tênis.</p>
+        </div>
+        <div class="diferencial-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h3>Brinquedoteca & Playground</h3>
+          <p>Ambientes lúdicos e seguros para os pequenos.</p>
+        </div>
+        <div class="diferencial-card reveal">
+          <div class="dif-icon">&#10022;</div>
+          <h3>Pet Place & Spa Animal</h3>
+          <p>Área dedicada aos cuidados dos seus animais de estimação.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="section galeria" id="galeria">
+    <div class="container">
+      <span class="section-label reveal">Perspectivas</span>
+      <h2 class="section-title center reveal">Imagens e Ambientes de Alto Padr&#227;o</h2>
+    </div>
+    <div class="carousel-wrapper reveal">
+      <div class="carousel-track" id="galTrack">
+        <div class="carousel-item">
+          <img src="https://oportunidades.exto.com.br/midias/the-selection-moema/featured/full/Portico-2.jpg" alt="The Selection Moema - Perspectiva 1" loading="lazy">
+          <div class="carousel-caption">
+            <span class="carousel-badge">The Selection Moema</span>
+            <p>Perspectiva Exclusiva 1</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://oportunidades.exto.com.br/midias/the-selection-moema/galeria/full/Exto_Maracatins_07_Quadra-Tenis_R01_LR-1-1.jpg" alt="The Selection Moema - Perspectiva 2" loading="lazy">
+          <div class="carousel-caption">
+            <span class="carousel-badge">The Selection Moema</span>
+            <p>Perspectiva Exclusiva 2</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://oportunidades.exto.com.br/midias/the-selection-moema/galeria/full/Gourmet-Tennis.jpg" alt="The Selection Moema - Perspectiva 3" loading="lazy">
+          <div class="carousel-caption">
+            <span class="carousel-badge">The Selection Moema</span>
+            <p>Perspectiva Exclusiva 3</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://oportunidades.exto.com.br/midias/the-selection-moema/destaque/full/Piscina-coberta-25m-com-raia.jpg" alt="The Selection Moema - Perspectiva 4" loading="lazy">
+          <div class="carousel-caption">
+            <span class="carousel-badge">The Selection Moema</span>
+            <p>Perspectiva Exclusiva 4</p>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-btn prev" onclick="scrollCarousel('galTrack','prev')" aria-label="Anterior">&#8249;</button>
+      <button class="carousel-btn next" onclick="scrollCarousel('galTrack','next')" aria-label="Proximo">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- PLANTAS E TIPOLOGIAS -->
+  <section class="section plantas" id="plantas">
+    <div class="container">
+      <span class="section-label center reveal">Tipologias Inteligentes</span>
+      <h2 class="section-title center reveal">Plantas Projetadas com Excel&#234;ncia</h2>
+      <div class="title-bar center"></div>
+      <div class="plantas-grid reveal" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:24px;margin-top:40px;">
+        <div class="planta-card" style="background:var(--white);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--cream-dark);box-shadow:var(--shadow);">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;">Lançamento</span>
+          <h3 style="font-family:var(--font-serif);font-size:1.6rem;color:var(--wine-dark);margin:10px 0;">170 m²</h3>
+          <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:20px;">3 Suítes &#183; 2 a 3 Vagas &#183; Amplo Living com Integra&#231;&#227;o Gourmet</p>
+          <ul style="list-style:none;padding:0;margin:0 0 24px;color:var(--text);font-size:0.88rem;display:flex;flex-direction:column;gap:8px;">
+            <li>&#10003; Su&#237;te Master com espa&#231;o para closet</li>
+            <li>&#10003; Hall privativo com leitura biom&#233;trica</li>
+            <li>&#10003; Caixilhos amplos com atenua&#231;&#227;o ac&#250;stica</li>
+            <li>&#10003; Infraestrutura para ar-condicionado</li>
+          </ul>
+          <button class="btn-primary" style="width:100%;" onclick="openModal('modal-visita')">Solicitar Planta Detalhada</button>
+        </div>
+        <div class="planta-card" style="background:var(--wine-dark);border-radius:var(--radius-lg);padding:32px;color:var(--white);box-shadow:var(--shadow-lg);">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--gold-light);text-transform:uppercase;letter-spacing:0.1em;">Personaliza&#231;&#227;o</span>
+          <h3 style="font-family:var(--font-serif);font-size:1.6rem;color:var(--white);margin:10px 0;">Consultoria Personalizada</h3>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;margin-bottom:20px;">Consulte op&#231;&#245;es de plantas decoradas e disponibilidades atualizadas em tempo real com o Corretor Coelho.</p>
+          <a href="https://wa.me/5511996917883?text=Ol%C3%A1%2C+Coelho%21+Gostaria+de+receber+as+plantas+do+The%20Selection%20Moema." target="_blank" rel="noopener" class="btn-secondary" style="width:100%;display:inline-block;text-align:center;">Falar com Corretor Coelho</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULÁRIO DE CONTATO -->
+  <section class="section contato" id="contato">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-left reveal">
+          <span class="section-label">Atendimento com Hora Marcada</span>
+          <h2 class="contato-title">Agende sua visita<br>ao The Selection Moema</h2>
+          <p>O Corretor Coelho est&#225; &#224; disposi&#231;&#227;o para apresentar todos os detalhes t&#233;cnicos, tabela de valores e condi&#231;&#245;es especiais de negocia&#231;&#227;o.</p>
+          <div class="contato-beneficios">
+            <div class="cb-item"><span>&#10003;</span> Apresenta&#231;&#227;o detalhada com hora marcada</div>
+            <div class="cb-item"><span>&#10003;</span> An&#225;lise financeira personalizada</div>
+            <div class="cb-item"><span>&#10003;</span> Atendimento VIP e confidencial</div>
+            <div class="cb-item"><span>&#10003;</span> Corretor Coelho &#183; CRECI 037234-J</div>
+          </div>
+          <div class="contato-social">
+            <p>Ou fale diretamente com o Corretor Coelho:</p>
+            <a href="tel:+5511996917883" class="social-link phone">&#9742; (11) 99691-7883</a>
+            <a href="https://wa.me/5511996917883?text=Ol%C3%A1%2C+Coelho%21+Gostaria+de+agendar+uma+visita+ao+The%20Selection%20Moema."
+              target="_blank" rel="noopener" class="social-link whatsapp">&#128172; WhatsApp (11) 99691-7883</a>
+          </div>
+        </div>
+        <div class="contato-form-wrap reveal">
+          <form class="contato-form" id="formContato" onsubmit="handleSubmit(event,'contato')">
+            <div class="form-header">
+              <h3>Agende sua Visita</h3>
+              <p>Resposta r&#225;pida em at&#233; 1 hora &#250;til</p>
+            </div>
+            <div class="form-group">
+              <label for="c-nome">Nome completo *</label>
+              <input type="text" id="c-nome" name="nome" placeholder="Seu nome" required>
+            </div>
+            <div class="form-row two">
+              <div class="form-group">
+                <label for="c-email">E-mail *</label>
+                <input type="email" id="c-email" name="email" placeholder="seu@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="c-tel">Telefone / WhatsApp *</label>
+                <input type="tel" id="c-tel" name="telefone" placeholder="(11) 99999-9999" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="c-int">Tipologia de interesse</label>
+              <select id="c-int" name="tipologia">
+                <option value="">Selecione...</option>
+                <option value="Apartamento Tipo 170 m² – 3 Suítes · 2 a 3 Vagas">Apartamento Tipo 170 m² – 3 Suítes · 2 a 3 Vagas</option>
+                <option value="Opção Living Ampliado 170 m² – 3 Quartos">Opção Living Ampliado 170 m² – 3 Quartos</option>
+                <option value="Unidade Garden com Quintal Privativo">Unidade Garden com Quintal Privativo</option>
+
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="c-msg">Mensagem</label>
+              <textarea id="c-msg" name="mensagem" rows="3" placeholder="Quando prefere visitar? Alguma d&#250;vida?"></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="c-lgpd" required>
+              <label for="c-lgpd">Autorizo contato conforme a <button type="button" onclick="openModal('modal-privacidade')" class="link-privacy">Pol&#237;tica de Privacidade</button>.</label>
+            </div>
+            <button type="submit" class="btn-submit">Solicitar Atendimento &#8594;</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER OUTROS PRODUTOS (HUB) -->
+  <section class="section outros" id="outros">
+    <div class="container">
+      <span class="section-label reveal">Portf&#243;lio Exclusivo</span>
+      <h2 class="section-title center reveal">Conhe&#231;a Outros Empreendimentos Selecionados</h2>
+      <p style="text-align:center;max-width:650px;margin:0 auto 32px;color:var(--text-light);font-size:0.95rem;" class="reveal">Explore a sele&#231;&#227;o exclusiva de im&#243;veis residenciais nos melhores bairros de S&#227;o Paulo, com assessoria direta do Corretor Coelho.</p>
+      <div class="outros-wrap reveal">
+        <div class="outros-track" id="outrosTrack">
+          <a href="index.html" class="outro-card">
+            <div class="outro-card-img-wrap">
+              <img src="assets/images/Chateau-Jardin-Vista-aerea-do-lazer-1.jpg" alt="ChÃ¢teau Jardin" loading="lazy">
+              <span class="outro-status-badge">LanÃ§amento</span>
+            </div>
+            <div class="outro-info">
+              <span class="outro-bairro">Cidade Jardim Â· SÃ£o Paulo</span>
+              <h3>ChÃ¢teau Jardin</h3>
+              <p class="outro-specs">185 a 355 mÂ² Â· 3 a 4 suÃ­tes</p>
+              <span class="outro-link-btn">Conhecer Im&#243;vel &#8594;</span>
+            </div>
+          </a>
+
+          <a href="splend-moema.html" class="outro-card">
+            <div class="outro-card-img-wrap">
+              <img src="https://oportunidades.exto.com.br/midias/splend-moema/featured/full/PERSPECTIVAS-SPLEND-DESKTOP-23-1080w.webp" alt="Splend Moema" loading="lazy">
+              <span class="outro-status-badge">Em Obras</span>
+            </div>
+            <div class="outro-info">
+              <span class="outro-bairro">Moema Â· SÃ£o Paulo</span>
+              <h3>Splend Moema</h3>
+              <p class="outro-specs">258 mÂ² Â· 4 suÃ­tes Â· 3 ou 4 vagas</p>
+              <span class="outro-link-btn">Conhecer Im&#243;vel &#8594;</span>
+            </div>
+          </a>
+
+          <a href="ledge-brooklin.html" class="outro-card">
+            <div class="outro-card-img-wrap">
+              <img src="https://oportunidades.exto.com.br/midias/ledge-brooklin/featured/full/PERSPECTIVAS-LEDGE-DESKTOP-2-1080w.webp" alt="Ledge Brooklin" loading="lazy">
+              <span class="outro-status-badge">Pronto para Morar</span>
+            </div>
+            <div class="outro-info">
+              <span class="outro-bairro">Brooklin Â· SÃ£o Paulo</span>
+              <h3>Ledge Brooklin</h3>
+              <p class="outro-specs">70, 80 e 122 mÂ² Â· 1 a 3 suÃ­tes</p>
+              <span class="outro-link-btn">Conhecer Im&#243;vel &#8594;</span>
+            </div>
+          </a>
+
+          <a href="ampere-brooklin.html" class="outro-card">
+            <div class="outro-card-img-wrap">
+              <img src="https://oportunidades.exto.com.br/midias/ampere-brooklin/featured/full/20-Detalhe-da-fachada-1080w.webp" alt="AmpÃ¨re Brooklin" loading="lazy">
+              <span class="outro-status-badge">Em Obras</span>
+            </div>
+            <div class="outro-info">
+              <span class="outro-bairro">Brooklin Â· SÃ£o Paulo</span>
+              <h3>AmpÃ¨re Brooklin</h3>
+              <p class="outro-specs">262 mÂ² Â· 3 a 4 suÃ­tes Â· 3 ou 4 vagas</p>
+              <span class="outro-link-btn">Conhecer Im&#243;vel &#8594;</span>
+            </div>
+          </a>
+
+          <a href="legacy-guedala.html" class="outro-card">
+            <div class="outro-card-img-wrap">
+              <img src="https://oportunidades.exto.com.br/midias/legacy-guedala/featured/full/LEGACY_PORTICO-ENTRADA_LR-1-1080w.webp" alt="Legacy Guedala" loading="lazy">
+              <span class="outro-status-badge">Em Obras</span>
+            </div>
+            <div class="outro-info">
+              <span class="outro-bairro">Jardim Guedala Â· SÃ£o Paulo</span>
+              <h3>Legacy Guedala</h3>
+              <p class="outro-specs">140 e 173 mÂ² Â· 3 suÃ­tes</p>
+              <span class="outro-link-btn">Conhecer Im&#243;vel &#8594;</span>
+            </div>
+          </a>
+
+          <a href="the-view-ibirapuera.html" class="outro-card">
+            <div class="outro-card-img-wrap">
+              <img src="https://oportunidades.exto.com.br/midias/the-view-ibirapuera/featured/full/19-THE-VIEW-EMPREENDIMENTO-DESKTOP-1080w.webp" alt="The View Ibirapuera" loading="lazy">
+              <span class="outro-status-badge">Em Obras</span>
+            </div>
+            <div class="outro-info">
+              <span class="outro-bairro">Ibirapuera Â· SÃ£o Paulo</span>
+              <h3>The View Ibirapuera</h3>
+              <p class="outro-specs">290 mÂ² Â· 4 suÃ­tes Â· 4 vagas</p>
+              <span class="outro-link-btn">Conhecer Im&#243;vel &#8594;</span>
+            </div>
+          </a>
+
+          <a href="only-cidade-jardim.html" class="outro-card">
+            <div class="outro-card-img-wrap">
+              <img src="https://oportunidades.exto.com.br/midias/only-cidade-jardim/featured/full/EMPREENDIMENTO-ONLY-DESKTOP-25-1080w.webp" alt="Only Cidade Jardim" loading="lazy">
+              <span class="outro-status-badge">Pronto para Morar</span>
+            </div>
+            <div class="outro-info">
+              <span class="outro-bairro">Cidade Jardim Â· SÃ£o Paulo</span>
+              <h3>Only Cidade Jardim</h3>
+              <p class="outro-specs">186 a 252 mÂ² Â· 4 suÃ­tes</p>
+              <span class="outro-link-btn">Conhecer Im&#243;vel &#8594;</span>
+            </div>
+          </a>
+
+        </div>
+        <button class="outros-btn prev" onclick="scrollOutros('prev')" aria-label="Anterior">&#8249;</button>
+        <button class="outros-btn next" onclick="scrollOutros('next')" aria-label="Proximo">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="logo-text">THE SELECTION MOEMA</span>
+            <p>Exclusividade residencial em Moema, São Paulo. Consultoria e atendimento exclusivo com o Corretor Coelho &#8212; CRECI 037234-J.</p>
+            <div class="footer-socials">
+              <a href="https://wa.me/5511996917883" target="_blank" rel="noopener" class="fs-link" title="WhatsApp">&#128172;</a>
+              <a href="tel:+5511996917883" class="fs-link" title="Telefone">&#9742;</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Empreendimento</h4>
+            <ul>
+              <li><a href="#sobre">Conceito</a></li>
+              <li><a href="#lazer">&#193;reas de Lazer</a></li>
+              <li><a href="#galeria">Galeria</a></li>
+              <li><a href="#plantas">Plantas</a></li>
+              <li><a href="#outros">Portf&#243;lio Completo</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Corretor Coelho</h4>
+            <ul>
+              <li><span style="font-size:0.85rem;color:var(--gold);font-weight:600;">CRECI 037234-J</span></li>
+              <li><a href="#sobre">Atendimento Personalizado</a></li>
+              <li><a href="https://wa.me/5511996917883" target="_blank" rel="noopener">WhatsApp Direto</a></li>
+              <li><a href="#outros">Todos os Im&#243;veis</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contato Oficial</h4>
+            <ul>
+              <li><a href="tel:+5511996917883">&#9742; (11) 99691-7883</a></li>
+              <li><a href="https://wa.me/5511996917883" target="_blank" rel="noopener">&#128172; WhatsApp Oficial</a></li>
+              <li><a href="mailto:contato@queroimoveisja.com.br">&#9993; contato@queroimoveisja.com.br</a></li>
+              <li>Alameda dos Maracatins, 857 - Moema, São Paulo - SP</li>
+            </ul>
+            <button class="btn-footer-cta" onclick="openModal('modal-visita')">Agendar Visita</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="footer-disclaimer">* Informa&#231;&#245;es preliminares sujeitas a modifica&#231;&#245;es sem aviso pr&#233;vio. Imagens meramente ilustrativas. P&#225;gina de divulga&#231;&#227;o e consultoria pessoal do Corretor Coelho &#8211; CRECI 037234-J.</p>
+        <div class="footer-legal">
+          <span>&#169; 2026 Corretor Coelho &#8211; CRECI 037234-J. Todos os direitos reservados.</span>
+          <button onclick="openModal('modal-privacidade')" class="link-privacy-footer">Pol&#237;tica de Privacidade</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-btns">
+    <button class="float-btn wpp" onclick="openModal('modal-wpp')" aria-label="WhatsApp"><span
+        class="float-icon">&#128172;</span><span>WhatsApp</span></button>
+    <button class="float-btn call" onclick="openModal('modal-call')" aria-label="Ligar"><span
+        class="float-icon">&#9742;</span><span>Ligar</span></button>
+  </div>
+
+  <!-- MODAL VISITA -->
+  <div class="modal-overlay" id="modal-visita" onclick="closeModalOutside(event,this)">
+    <div class="modal-box"><button class="modal-close" onclick="closeModal('modal-visita')">&#10005;</button>
+      <div class="modal-header"><span class="modal-label">The Selection Moema</span>
+        <h2>Agendar Visita Exclusiva</h2>
+        <p>O Corretor Coelho entrar&#225; em contato em at&#233; 1 hora &#250;til.</p>
+      </div>
+      <form onsubmit="handleSubmit(event,'visita')">
+        <div class="form-group"><label>Nome *</label><input type="text" name="nome" placeholder="Seu nome completo" required></div>
+        <div class="form-row two">
+          <div class="form-group"><label>E-mail *</label><input type="email" name="email" placeholder="seu@email.com" required></div>
+          <div class="form-group"><label>WhatsApp *</label><input type="tel" name="telefone" placeholder="(11) 99999-9999" required></div>
+        </div>
+        <div class="form-group"><label>Tipologia</label>
+          <select name="tipologia">
+                <option value="Apartamento Tipo 170 m² – 3 Suítes · 2 a 3 Vagas">Apartamento Tipo 170 m² – 3 Suítes · 2 a 3 Vagas</option>
+                <option value="Opção Living Ampliado 170 m² – 3 Quartos">Opção Living Ampliado 170 m² – 3 Quartos</option>
+                <option value="Unidade Garden com Quintal Privativo">Unidade Garden com Quintal Privativo</option>
+
+          </select>
+        </div>
+        <div class="form-check"><input type="checkbox" id="m-lgpd" required><label for="m-lgpd">Autorizo contato conforme a Pol&#237;tica de Privacidade.</label></div>
+        <button type="submit" class="btn-submit">Confirmar Agendamento &#8594;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL FICHA TÉCNICA -->
+  <div class="modal-overlay" id="modal-ficha" onclick="closeModalOutside(event,this)">
+    <div class="modal-box modal-wide"><button class="modal-close" onclick="closeModal('modal-ficha')">&#10005;</button>
+      <div class="modal-header"><span class="modal-label">Especifica&#231;&#245;es</span>
+        <h2>Ficha T&#233;cnica &#8212; The Selection Moema</h2>
+      </div>
+      <div class="ficha-grid">
+        <div class="ficha-item"><strong>Empreendimento</strong><span>The Selection Moema</span></div>
+        <div class="ficha-item"><strong>Endere&#231;o</strong><span>Alameda dos Maracatins, 857 - Moema, São Paulo - SP</span></div>
+        <div class="ficha-item"><strong>Bairro</strong><span>Moema, São Paulo</span></div>
+        <div class="ficha-item"><strong>Metragem</strong><span>170 m² privativos</span></div>
+        <div class="ficha-item"><strong>Dormit&#243;rios</strong><span>3 Suítes</span></div>
+        <div class="ficha-item"><strong>Vagas de Garagem</strong><span>2 a 3 Vagas</span></div>
+        <div class="ficha-item"><strong>Status da Obra</strong><span>Lançamento</span></div>
+        <div class="ficha-item"><strong>Consultoria</strong><span>Corretor Coelho &#8212; CRECI 037234-J</span></div>
+        <div class="ficha-item"><strong>&#193;reas Comuns</strong><span>Entregues equipadas e decoradas</span></div>
+        <div class="ficha-item"><strong>Hall Social</strong><span>Privativo com biometria por prumada</span></div>
+      </div>
+      <button class="btn-primary" onclick="closeModal('modal-ficha');openModal('modal-visita')">Agendar Visita</button>
+    </div>
+  </div>
+
+  <!-- MODAL WPP -->
+  <div class="modal-overlay" id="modal-wpp" onclick="closeModalOutside(event,this)">
+    <div class="modal-box modal-compact"><button class="modal-close" onclick="closeModal('modal-wpp')">&#10005;</button>
+      <div class="modal-header wpp-header">
+        <div class="wpp-icon">&#128172;</div>
+        <h2>Fale via WhatsApp</h2>
+        <p>Atendimento imediato com o Corretor Coelho</p>
+      </div>
+      <form onsubmit="handleSubmitWpp(event)">
+        <div class="form-group"><label>Nome *</label><input type="text" id="wpp-nome" placeholder="Seu nome" required></div>
+        <div class="form-group"><label>Telefone *</label><input type="tel" id="wpp-tel" placeholder="(11) 99999-9999" required></div>
+        <button type="submit" class="btn-submit wpp-btn">Iniciar Conversa no WhatsApp</button>
+      </form>
+      <a href="https://wa.me/5511996917883?text=Ol%C3%A1%2C+Coelho%21+Tenho+interesse+no+The%20Selection%20Moema." target="_blank"
+        rel="noopener" class="wpp-direct">Abrir WhatsApp diretamente &#8594;</a>
+    </div>
+  </div>
+
+  <!-- MODAL CALL -->
+  <div class="modal-overlay" id="modal-call" onclick="closeModalOutside(event,this)">
+    <div class="modal-box modal-compact"><button class="modal-close" onclick="closeModal('modal-call')">&#10005;</button>
+      <div class="modal-header">
+        <h2>Fale com o Corretor Coelho</h2>
+        <p>Ligue agora ou solicite retorno:</p>
+      </div>
+      <div class="call-numbers">
+        <a href="tel:+5511996917883" class="call-link">&#9742; Telefone: (11) 99691-7883</a>
+        <a href="https://wa.me/5511996917883" target="_blank" rel="noopener" class="call-link">&#128172; WhatsApp: (11) 99691-7883</a>
+      </div>
+      <hr class="modal-divider">
+      <form onsubmit="handleSubmit(event,'ligacao')">
+        <div class="form-group"><label>Deixe seu n&#250;mero para retorno:</label><input type="tel" name="telefone" placeholder="(11) 99999-9999" required></div>
+        <div class="form-group"><label>Seu nome:</label><input type="text" name="nome" placeholder="Seu nome completo" required></div>
+        <button type="submit" class="btn-submit">Solicitar Retorno de Chamada</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL PRIVACIDADE -->
+  <div class="modal-overlay" id="modal-privacidade" onclick="closeModalOutside(event,this)">
+    <div class="modal-box modal-wide scrollable"><button class="modal-close" onclick="closeModal('modal-privacidade')">&#10005;</button>
+      <div class="modal-header">
+        <h2>Pol&#237;tica de Privacidade</h2>
+      </div>
+      <div class="privacy-content">
+        <p>O Corretor Coelho respeita a sua privacidade e est&#225; comprometido com a prote&#231;&#227;o de seus dados pessoais, em conformidade com a Lei Geral de Prote&#231;&#227;o de Dados Pessoais (Lei n&#186; 13.709/2018 &#8211; LGPD).</p>
+        <h4>Dados Coletados</h4>
+        <p>Coletamos nome, e-mail e telefone exclusivamente para fins de atendimento e consultoria imobili&#225;ria sobre o empreendimento The Selection Moema.</p>
+        <h4>Finalidade do Tratamento</h4>
+        <p>Atendimento exclusivo, consultoria personalizada e agendamento de visitas com hora marcada.</p>
+        <h4>Seus Direitos</h4>
+        <p>Voc&#234; pode solicitar acesso, corre&#231;&#227;o ou exclus&#227;o dos seus dados diretamente pelo WhatsApp ou e-mail oficial.</p>
+        <h4>Contato Oficial</h4>
+        <p>Corretor Coelho | CRECI 037234-J | E-mail: contato@queroimoveisja.com.br | WhatsApp: (11) 99691-7883 | S&#227;o Paulo, SP</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <div class="toast-icon">&#10003;</div>
+    <div class="toast-text"><strong>Recebemos seu contato!</strong><span>O Corretor Coelho retornar&#225; em breve.</span></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
