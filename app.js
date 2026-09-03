@@ -365,7 +365,7 @@ function handleSubmitWpp(event) {
   const msg = encodeURIComponent(
     `Olá! Sou ${nome}, tenho interesse no ${empNome}. Meu telefone: ${tel}`
   );
-  const url = `https://wa.me/5511996917883?text=${msg}`;
+  const url = `https://wa.me/5511969155717?text=${msg}`;
 
   setTimeout(() => {
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -465,5 +465,5 @@ document.querySelectorAll('img').forEach((img) => {
 // ─── INIT ─────────────────────────────────────────
 console.log('🏛 Château Jardin — Landing Page Oficial');
 console.log('🏢 Consultoria: Quero Imóveis Já (CRECI 037234-J)');
-console.log('📞 Contato Oficial / WhatsApp: (11) 99691-7883');
+console.log('📞 Contato Oficial / WhatsApp: (11) 96915-5717');
 console.log('✉️ E-mail: contato@queroimoveisja.com.br');
