@@ -88,17 +88,19 @@ function moveCarousel(trackId, direction) {
   const cfg = getCarouselConfig(trackId);
   if (!cfg) return;
   const { track, slideWidth, total } = cfg;
-  const state = carouselState[trackId];
-  const visibleCount = getVisibleItems(trackId);
-  const maxPos = total - visibleCount;
 
   if (direction === 'next') {
-    state.pos = state.pos >= maxPos ? 0 : state.pos + 1;
+    carouselState[trackId].pos = (carouselState[trackId].pos + 1) % total;
   } else {
-    state.pos = state.pos <= 0 ? maxPos : state.pos - 1;
+    carouselState[trackId].pos = (carouselState[trackId].pos - 1 + total) % total;
   }
 
-  track.style.transform = `translateX(-${state.pos * slideWidth}px)`;
+  const offset = carouselState[trackId].pos * slideWidth;
+  track.scrollTo({ left: offset, behavior: 'smooth' });
+}
+
+function scrollCarousel(trackId, direction) {
+  moveCarousel(trackId, direction);
 }
 
 function getVisibleItems(trackId) {
