@@ -443,12 +443,25 @@ textarea, input, select { font-family: inherit; }
   animation: fadeUp 1.2s 0.35s ease both;
 }
 .hero-title em { font-style: italic; color: var(--gold-light); }
+.hero-tagline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  font-style: italic;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+  line-height: 1.35;
+  font-weight: 400;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeUp 1.2s 0.45s ease both;
+}
 .hero-address {
   font-size: 0.85rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.7);
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   animation: fadeUp 1.2s 0.5s ease both;
 }
 .hero-features {
