@@ -1,0 +1,8 @@
+# robots.txt — Château Jardin / Quero Imóveis Já
+# https://sitecoelho.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sitecoelho.vercel.app/sitemap.xml
