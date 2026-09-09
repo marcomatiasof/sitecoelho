@@ -2343,8 +2343,22 @@ textarea, input, select { font-family: inherit; }
   .carousel-btn { width: 40px; height: 40px; font-size: 1.2rem; }
 
   /* Lazer */
-  .lazer-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .lazer-img img { height: 160px; }
+  .lazer-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 16px;
+    padding: 0 4px 20px;
+    scroll-padding-left: 4px;
+  }
+  .lazer-grid::-webkit-scrollbar { display: none; }
+  .lazer-card {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+  }
+  .lazer-img img { height: 200px; }
   .lazer-hero-img img { height: 240px; }
 
   /* Diferenciais */
@@ -2434,7 +2448,6 @@ textarea, input, select { font-family: inherit; }
   .btn-hero-outline { font-size: 0.78rem; padding: 13px 20px; }
 
   /* Lazer */
-  .lazer-grid { grid-template-columns: 1fr; gap: 12px; }
   .lazer-img img { height: 200px; }
 
   /* Plantas */
