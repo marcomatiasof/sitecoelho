@@ -2199,6 +2199,13 @@ textarea, input, select { font-family: inherit; }
     border-right: none;
     border-bottom: 1px solid rgba(201, 168, 76, 0.2);
   }
+  .canvas-title-wrap {
+    display: none;
+  }
+  .canvas-top-bar {
+    justify-content: center;
+    padding: 12px;
+  }
   .planta-sidebar-pane {
     padding: 24px 20px;
   }
