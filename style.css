@@ -308,10 +308,7 @@ textarea, input, select { font-family: inherit; }
   text-transform: uppercase;
   color: var(--text-light);
   margin-top: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px;
+  line-height: 1.4;
 }
 .header-nav {
   display: flex;
