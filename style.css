@@ -2480,4 +2480,13 @@ textarea, input, select { font-family: inherit; }
   /* Footer */
   .footer-legal { flex-direction: column; gap: 8px; text-align: center; }
   .footer-disclaimer { font-size: 0.65rem; }
+
+  /* Ocultar mensagem de zoom no mobile */
+  .canvas-hint-pill { display: none !important; }
 }
+@
+/* Correcoes globais de cor */
+.footer-brand .logo-text { color: var(--wine) !important; font-weight: 700; }
+.outro-info h3 { color: var(--gold) !important; font-size: 1.2rem !important; }
+.outro-bairro { color: #fff !important; }
+

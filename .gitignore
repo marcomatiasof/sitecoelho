@@ -1,3 +1,6 @@
 git-portable/
 git_installer.exe
 *.log
+
+node_modules/
+PDF/
