@@ -2286,7 +2286,7 @@ textarea, input, select { font-family: inherit; }
   /* Header */
   .header-inner { padding: 0 16px; gap: 8px; }
   .logo-text { font-size: 1.1rem; }
-  .logo-sub { display: none; }  /* Oculta o CRECI no mobile — espaço insuficiente */
+  .logo-sub { display: block; font-size: 0.6rem; margin-top: 0; opacity: 0.8; }
   .header-nav, .header-cta { display: none; }
   .hamburger { display: flex; }
   .mobile-menu { padding: 16px 16px 20px; }
