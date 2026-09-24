@@ -2496,15 +2496,11 @@ textarea, input, select { font-family: inherit; }
     position: absolute;
     z-index: 10;
     top: 0; left: 0;
-    width: 100%; min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
+    width: 100%; height: 100vh;
     /* Reset old styles */
     transform: none !important;
     max-width: none !important;
+    pointer-events: none; /* Let clicks pass through if needed, except buttons */
 }
 
 /* Desktop Defaults */
@@ -2524,11 +2520,16 @@ textarea, input, select { font-family: inherit; }
     margin: 0 auto;
 }
 .custom-hero-bottom {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    pointer-events: auto; /* Re-enable clicks for buttons */
 }
 .btn-unmute-custom {
     background: rgba(0,0,0,0.5);
@@ -2544,8 +2545,12 @@ textarea, input, select { font-family: inherit; }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+    .custom-hero-bottom {
+        bottom: 30px;
+        gap: 0.8rem;
+    }
     .custom-hero-layout {
-        padding: 90px 15px 30px 15px; /* Less top padding so title goes up, less bottom padding so buttons fit */
+        padding: 0;
     }
     .hero-custom-title {
         font-size: 1.3rem; /* Smaller to fit perfectly */
