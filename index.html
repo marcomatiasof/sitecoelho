@@ -198,7 +198,7 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content" style="z-index: 10;">
-      <h2 style="color: #fff; font-size: 1.5rem; font-weight: 500; margin-bottom: 10px; max-width: 800px; text-align: center; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">
+      <h2 style="color: #fff; font-size: clamp(1.1rem, 4vw, 1.5rem); font-weight: 500; margin-bottom: 10px; max-width: 800px; text-align: center; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); padding: 0 1rem; line-height: 1.4;">
         O mercado imobiliário paulistano está saturado de projetos que parecem iguais.<br>Mas existe uma exceção. E ela acaba de nascer.
       </h2>
       <span class="badge-lancamento" style="margin-bottom: 2rem;">&#10006; Lan&#231;amento</span>
@@ -977,8 +977,7 @@
   <div class="floating-btns">
     <button class="float-btn wpp" onclick="openModal('modal-wpp')" aria-label="WhatsApp"><span
         class="float-icon">&#128172;</span><span>WhatsApp</span></button>
-    <button class="float-btn call" onclick="openModal('modal-call')" aria-label="Ligar"><span
-        class="float-icon">&#9742;</span><span>Ligar</span></button>
+    
   </div>
   <div class="modal-overlay" id="modal-visita" onclick="closeModalOutside(event,this)">
     <div class="modal-box"><button class="modal-close" onclick="closeModal('modal-visita')">&#10005;</button>
