@@ -1,0 +1,444 @@
+
+
+===== 03 P3_ Definir Mecanismo Único - IMPLEMENTAÇÃO COM DOUG.EXE · 〄 BACKROOM.pdf =====
+
+
+P3: Definir Mecanismo Único
+Quando usar: Quando você precisa nomear e estruturar SEU 
+método de forma que pareça proprietário e insubstituível.
+Prompt
+Preciso criar meu MECANISMO ÚNICO — o nome e estrutura do 
+meu método que faz parecer que só eu tenho a solução.
+O Mecanismo Único responde: "Por que seu método funciona 
+quando outros falham?"
+Vou te contar:
+- O que eu ensino/faço
+- O resultado que entrego
+- Os passos do meu processo (mesmo que informal)
+- O que eu faço DIFERENTE dos outros
+Com base nisso, me entrega:
+1. 3 opções de nome para o método, cada uma com:
+   - O nome
+   - Por que esse nome funciona
+   - Como ele soa proprietário
+2. Para o nome que você mais recomenda:
+   - Estrutura em 3-5 pilares/etapas
+   - Nome de cada pilar
+   - O que cada pilar faz (1 linha)
+3. Uma frase de explicação do método:
+   "O [NOME DO MÉTODO] é um sistema de X etapas que 
+[RESULTADO] através de [DIFERENCIAL]."
+Começa me perguntando sobre meu processo e o que faço 
+diferente.
+Resultado esperado
+Você vai receber:
+3 opções de nome pro seu método
+Estrutura completa em pilares/etapas
+
+Frase de explicação pronta pra usar
+Situações comuns & soluções
+1. "Os nomes estão muito comuns"
+Diga: "Doug, esses nomes parecem genéricos. Quero algo que 
+soe mais proprietário, que ninguém mais poderia usar. Pode 
+inventar palavras ou usar combinações inusitadas."
+2. "Quero mais opções de nome"
+Diga: "Doug, me dá mais 5 opções de nome. Tenta: um em 
+inglês, um com sigla, um com metáfora, um provocativo, um 
+técnico."
+3. "A estrutura ficou confusa"
+Diga: "Doug, simplifica a estrutura. Quero no máximo 3 pilares 
+com nomes fáceis de lembrar. Menos é mais."
+4. "Quero validar se o nome funciona"
+Diga: "Doug, como eu testo se o nome [X] funciona antes de 
+usar? Me dá um jeito de validar com meu público."
+5. "Preciso de um acrônimo"
+Diga: "Doug, cria um acrônimo pro meu método. Cada letra 
+representa uma etapa. Tipo P.A.S.T.E. ou similar."
+6. "Quero que soe mais científico/técnico"
+Diga: "Doug, quero que meu método soe mais técnico e 
+científico. Reformula os nomes e a estrutura pra parecer mais 
+'sério' e baseado em fundamentos."
+
+
+===== 07 O1_ Copy para Mentoria em Grupo - IMPLEMENTAÇÃO COM DOUG.EXE · 〄 BACKROOM.pdf =====
+
+
+ Quando você está criando ou reformulando uma oferta de mentoria coletiva e 
+precisa de copy de vendas completa.
+Preciso criar a COPY DE VENDAS para uma MENTORIA EM GRUPO.
+Vou te contar:
+- Nome da mentoria (se tiver)
+- Pra quem é (perfil do cliente ideal)
+- Qual problema resolve
+- Qual transformação entrega
+- Formato (encontros ao vivo, comunidade, etc.)
+- Duração (3 meses, 6 meses, ongoing)
+- Preço
+- Diferenciais (o que só você oferece)
+Com base nisso, me entrega:
+1. HEADLINE PRINCIPAL
+   - 3 opções de headline (ângulos diferentes)
+2. ESTRUTURA DO GOOGLE DOC DE VENDAS
+   - Hook de abertura (2-3 parágrafos)
+   - Seção "Pra quem é" / "Pra quem NÃO é"
+   - O Problema (amplificado)
+   - A Solução (seu método)
+   - O que está incluso (lista de entregáveis)
+   - Prova (onde colocar depoimentos)
+   - Investimento + Justificativa
+   - Garantia
+O1: Copy para Mentoria em Grupo - IMPLEMENTAÇÃO COM DO...https://www.skool.com/backroom/classroom/848ce662?md=ab6890f81...
+1 of 307/12/2025, 21:55
+
+   - CTA Final
+   - FAQ (3 perguntas principais)
+3. SEQUÊNCIA DE 3 STORIES PRA VENDA
+   - Story 1: Tensão
+   - Story 2: Solução
+   - Story 3: CTA
+Escreve tudo pronto pra usar. Não me dá estrutura vazia.
+Começa me perguntando sobre a mentoria.
+Você vai receber:
+• 3 opções de headline
+• Google Doc de vendas completo
+• Sequência de 3 stories pronta
+1. "A copy está muito longa"
+Diga: "Doug, encurta a copy em 50%. Mantém só o essencial. Cada frase precisa puxar pra 
+próxima."
+2. "Quero mais opções de headline"
+Diga: "Doug, me dá mais 5 headlines. Tenta: uma com número, uma com pergunta, uma com 
+provocação, uma com resultado específico, uma com curiosidade."
+3. "A seção de problema está fraca"
+Diga: "Doug, amplifica mais a dor na seção de problema. Quero que a pessoa sinta que 
+precisa resolver isso AGORA."
+4. "Preciso de mais provas"
+Diga: "Doug, como estruturo a seção de provas se tenho poucos depoimentos? Me dá 
+O1: Copy para Mentoria em Grupo - IMPLEMENTAÇÃO COM DO...https://www.skool.com/backroom/classroom/848ce662?md=ab6890f81...
+2 of 307/12/2025, 21:55
+
+alternativas pra construir credibilidade."
+5. "Quero uma versão mais curta pra Stories"
+Diga: "Doug, transforma esse Google Doc em uma sequência de 10 stories que conta a 
+mesma história. Mais visual, menos texto."
+�. "O preço parece alto, preciso justificar melhor"
+Diga: "Doug, reforça a justificativa de preço. Me ajuda a mostrar por que [valor] é barato pelo 
+que a pessoa recebe."
+O1: Copy para Mentoria em Grupo - IMPLEMENTAÇÃO COM DO...https://www.skool.com/backroom/classroom/848ce662?md=ab6890f81...
+3 of 307/12/2025, 21:55
+
+
+===== 08 O3_ Copy para Curso_Infoproduto - IMPLEMENTAÇÃO COM DOUG.EXE · 〄 BACKROOM.pdf =====
+
+
+ Quando você está vendendo um curso gravado ou infoproduto e precisa de 
+copy completa.
+Preciso criar a COPY DE VENDAS para um CURSO/INFOPRODUTO.
+Vou te contar:
+- Nome do curso
+- Pra quem é (perfil do cliente ideal)
+- Qual problema resolve
+- Qual transformação entrega
+- O que está incluso (módulos, bônus, etc.)
+- Formato (vídeo, texto, misto)
+- Preço
+- Garantia (se tiver)
+Com base nisso, me entrega:
+1. HEADLINE + SUBHEADLINE
+   - 3 opções
+2. ESTRUTURA DO GOOGLE DOC DE VENDAS
+   - Hook de abertura
+   - Pra quem é esse curso
+   - O Problema que ele resolve
+   - Por que outros métodos falharam
+   - A Solução (seu método)
+   - O que você vai aprender (módulos resumidos)
+   - Bônus (se tiver)
+   - Prova social
+O3: Copy para Curso/Infoproduto - IMPLEMENTAÇÃO COM DOU...https://www.skool.com/backroom/classroom/848ce662?md=c2af776eb...
+1 of 307/12/2025, 21:56
+
+   - Investimento
+   - Garantia
+   - CTA
+   - FAQ
+3. COPY CURTA PRA STORIES (3 versões)
+   - Versão Tensão (foca no problema)
+   - Versão Desejo (foca no resultado)
+   - Versão Prova (foca em quem já fez)
+4. COPY PRA POST/CARROSSEL DE VENDA
+Escreve tudo pronto. Tom direto, sem enrolação.
+Começa me perguntando sobre o curso.
+Você vai receber:
+• 3 opções de headline + subheadline
+• Google Doc de vendas completo
+• 3 versões de copy curta pra stories
+• Copy pra post/carrossel de venda
+1. "A copy está muito parecida com todo mundo"
+Diga: "Doug, essa copy parece genérica de curso online. Me dá uma versão com meu tom de 
+voz, mais direto e provocativo. Menos 'você vai aprender', mais 'você vai parar de'."
+2. "Os módulos parecem chatos"
+Diga: "Doug, reescreve os nomes dos módulos pra soarem mais interessantes. Menos 
+'Módulo 1: Introdução', mais títulos que geram curiosidade."
+3. "Quero enfatizar a garantia"
+O3: Copy para Curso/Infoproduto - IMPLEMENTAÇÃO COM DOU...https://www.skool.com/backroom/classroom/848ce662?md=c2af776eb...
+2 of 307/12/2025, 21:56
+
+Diga: "Doug, cria uma seção de garantia mais forte. Quero que a pessoa sinta que não tem 
+risco nenhum em comprar."
+4. "Preciso de copy pra diferentes preços"
+Diga: "Doug, me dá versões da copy pra 3 faixas de preço: R$[X] (promocional), R$[Y] 
+(normal), R$[Z] (parcelado). Ajusta a urgência de cada uma."
+5. "Quero uma versão bem curta pra bio"
+Diga: "Doug, resume a proposta de valor do curso em 1 frase de no máximo 100 caracteres 
+pra usar na bio."
+�. "Não tenho depoimentos ainda"
+Diga: "Doug, como construo a seção de prova social sem ter alunos ainda? Me dá 
+alternativas pra gerar credibilidade."
+O3: Copy para Curso/Infoproduto - IMPLEMENTAÇÃO COM DOU...https://www.skool.com/backroom/classroom/848ce662?md=c2af776eb...
+3 of 307/12/2025, 21:56
+
+
+===== 10 O5_ Copy para Consultoria_Serviço - IMPLEMENTAÇÃO COM DOUG.EXE · 〄 BACKROOM.pdf =====
+
+
+ Quando você vende um serviço feito pra pessoa (done-for-you) ou consultoria 
+pontual.
+Preciso criar a COPY DE VENDAS para CONSULTORIA ou SERVIÇO.
+Serviço precisa vender:
+- Sua expertise (por que você?)
+- Resultado garantido ou esperado
+- Conveniência (você faz, não a pessoa)
+- Valor do tempo economizado
+Vou te contar:
+- O que você faz (serviço específico)
+- Pra quem é
+- Qual resultado entrega
+- Formato (consultoria única, pacote, ongoing)
+- Preço ou faixa
+- Tempo de entrega
+- O que te diferencia dos outros que fazem o mesmo
+Com base nisso, me entrega:
+1. OFERTA ESTRUTURADA
+   - Nome do serviço
+   - O que está incluso
+   - O que NÃO está incluso
+   - Entregáveis específicos
+   - Prazo de entrega
+   - Preço
+O5: Copy para Consultoria/Serviço - IMPLEMENTAÇÃO COM DO...https://www.skool.com/backroom/classroom/848ce662?md=e8671331...
+1 of 307/12/2025, 21:56
+
+2. DOC DE VENDAS (mais curto que curso)
+   - Headline
+   - O problema que você resolve
+   - Por que você (credenciais rápidas)
+   - O que você entrega
+   - Como funciona o processo
+   - Investimento
+   - Próximo passo
+3. MENSAGEM DE PROSPECÇÃO (DM/Email)
+   - Versão fria (pra quem não te conhece)
+   - Versão quente (pra quem já te segue)
+4. FOLLOW-UP APÓS ORÇAMENTO
+   - 3 mensagens de follow-up pra quem pediu proposta e sumiu
+Começa me perguntando sobre seu serviço.
+Você vai receber:
+• Oferta estruturada com entregáveis claros
+• Doc de vendas enxuto
+• Mensagens de prospecção (fria e quente)
+• Sequência de follow-up
+1. "Meu serviço é difícil de explicar"
+Diga: "Doug, meu serviço é [descreve]. Me ajuda a explicar de forma simples o que eu faço 
+em 1-2 frases que qualquer pessoa entenda."
+2. "Todo mundo faz a mesma coisa, como me diferencio?"
+Diga: "Doug, vários concorrentes fazem serviço parecido. Me ajuda a encontrar meu 
+O5: Copy para Consultoria/Serviço - IMPLEMENTAÇÃO COM DO...https://www.skool.com/backroom/classroom/848ce662?md=e8671331...
+2 of 307/12/2025, 21:56
+
+diferencial único e comunicar isso na copy."
+3. "A prospecção fria parece spam"
+Diga: "Doug, refaz a mensagem fria. Quero algo que pareça humano, não template. Mais 
+personalizado e menos vendedor."
+4. "Quero cobrar mais caro"
+Diga: "Doug, quero aumentar meu preço de R$[X] pra R$[Y]. Me ajuda a reformular a oferta e 
+a copy pra justificar o novo valor."
+5. "Preciso de proposta comercial formal"
+Diga: "Doug, cria uma estrutura de proposta comercial em PDF. Mais formal, pra enviar pra 
+empresas maiores."
+�. "Os follow-ups parecem desesperados"
+Diga: "Doug, refaz os follow-ups. Quero manter a postura. Não estou correndo atrás, estou 
+lembrando de uma oportunidade."
+O5: Copy para Consultoria/Serviço - IMPLEMENTAÇÃO COM DO...https://www.skool.com/backroom/classroom/848ce662?md=e8671331...
+3 of 307/12/2025, 21:56
+
+
+===== 26 M1_ Fluxo CTA → Oferta - IMPLEMENTAÇÃO COM DOUG.EXE · 〄 BACKROOM.pdf =====
+
+
+→
+ Quando você quer um fluxo de ManyChat que leva direto pra oferta. Venda 
+direta, sem aquecimento.
+Preciso criar um FLUXO DE MANYCHAT que leva direto pra oferta.
+Estrutura: Pessoa comenta/responde → Recebe mensagem → Vai pra oferta
+Vou te contar:
+- A palavra-chave que vai ativar o fluxo
+- Qual oferta estou vendendo
+- Preço
+- Link da oferta (página, Google Doc, WhatsApp)
+- Se tem urgência/escassez (vagas, prazo)
+Com base nisso, me entrega:
+1. FLUXO COMPLETO
+**GATILHO:**
+Palavra-chave: "[PALAVRA]"
+Onde: [Comentário em post / Resposta de story / DM]
+---
+**MENSAGEM 1 (imediata):**
+"[Texto de boas-vindas + gera expectativa]"
+[Delay: 1-2 minutos]
+M1: Fluxo CTA → Oferta - IMPLEMENTAÇÃO COM DOUG.EXE ·...https://www.skool.com/backroom/classroom/848ce662?md=c52800db...
+1 of 307/12/2025, 22:03
+
+---
+**MENSAGEM 2:**
+"[Apresenta a oferta de forma direta]"
+[Botão: QUERO SABER MAIS / VER OFERTA]
+---
+**MENSAGEM 3 (após clique):**
+"[Entrega o link + cria urgência se aplicável]"
+[Link]
+---
+**MENSAGEM 4 (follow-up 24h depois — só se não clicou):**
+"[Lembrete suave]"
+---
+2. CONFIGURAÇÃO TÉCNICA
+- Trigger: [como configurar]
+- Delays: [tempo entre mensagens]
+- Condicionais: [se clicou vs. não clicou]
+- Tags: [quais criar]
+3. VARIAÇÕES DE MENSAGEM
+(pra testar qual converte mais)
+- Versão A: [mais direta]
+- Versão B: [mais curiosidade]
+- Versão C: [mais prova social]
+Começa me perguntando sobre a oferta e o contexto.
+M1: Fluxo CTA → Oferta - IMPLEMENTAÇÃO COM DOUG.EXE ·...https://www.skool.com/backroom/classroom/848ce662?md=c52800db...
+2 of 307/12/2025, 22:03
+
+Você vai receber:
+• Fluxo completo com todas as mensagens
+• Configuração técnica detalhada
+• 3 variações pra testar
+1. "As mensagens parecem robô"
+Diga: "Doug, reescreve as mensagens de forma mais humana. Quero que pareça eu 
+conversando, não automação."
+2. "Quero mais mensagens no fluxo"
+Diga: "Doug, expande o fluxo. Adiciona mais etapas de aquecimento antes de apresentar a 
+oferta. Sequência de 5-6 mensagens."
+3. "O follow-up parece desesperado"
+Diga: "Doug, refaz o follow-up com mais postura. Não estou correndo atrás, estou 
+lembrando de uma oportunidade."
+4. "Quero segmentar quem clicou"
+Diga: "Doug, como configuro o fluxo pra tratar diferente quem clicou mas não comprou vs. 
+quem nem clicou?"
+5. "Preciso de versão pra WhatsApp"
+Diga: "Doug, adapta esse fluxo pra funcionar no WhatsApp manual. Mesma lógica mas sem 
+automação."
+�. "Quero testar diferentes CTAs"
+Diga: "Doug, me dá 5 opções de texto pro botão de CTA. Quero testar qual gera mais cliques."
+M1: Fluxo CTA → Oferta - IMPLEMENTAÇÃO COM DOUG.EXE ·...https://www.skool.com/backroom/classroom/848ce662?md=c52800db...
+3 of 307/12/2025, 22:03
+
+
+===== 27 M2_ Fluxo CTA → Conteúdo → Oferta - IMPLEMENTAÇÃO COM DOUG.EXE · 〄 BACKROOM.pdf =====
+
+
+→→
+ Quando você quer entregar valor primeiro antes de vender. Fluxo com isca 
+digital ou conteúdo gratuito.
+Preciso criar um FLUXO DE MANYCHAT que entrega conteúdo antes de apresentar a oferta.
+Estrutura: Pessoa comenta/responde → Recebe conteúdo gratuito → Depois recebe oferta
+Vou te contar:
+- A palavra-chave que vai ativar o fluxo
+- O conteúdo gratuito que vou entregar (PDF, vídeo, aula, etc.)
+- Link do conteúdo
+- Qual oferta vou apresentar depois
+- Relação entre o conteúdo e a oferta (como um leva pro outro)
+Com base nisso, me entrega:
+1. FLUXO COMPLETO
+**GATILHO:**
+Palavra-chave: "[PALAVRA]"
+Onde: [Comentário em post / Resposta de story / DM]
+---
+**MENSAGEM 1 (imediata):**
+"[Celebra a decisão + gera expectativa pro conteúdo]"
+[Delay: 30 segundos]
+M2: Fluxo CTA → Conteúdo → Oferta - IMPLEMENTAÇÃO COM...https://www.skool.com/backroom/classroom/848ce662?md=96419463f...
+1 of 407/12/2025, 22:04
+
+---
+**MENSAGEM 2:**
+"[Entrega o conteúdo + instrução de como consumir]"
+[Link do conteúdo]
+[Delay: 24-48 horas]
+---
+**MENSAGEM 3 (follow-up de valor):**
+"[Pergunta se consumiu + dá um insight extra relacionado]"
+[Delay: 24 horas]
+---
+**MENSAGEM 4 (ponte pra oferta):**
+"[Conecta o conteúdo com a oferta + faz transição natural]"
+[Delay: 2-4 horas]
+---
+**MENSAGEM 5 (apresenta oferta):**
+"[Apresenta a oferta como próximo passo lógico]"
+[Link da oferta]
+---
+**MENSAGEM 6 (follow-up 48h depois — só se não clicou):**
+"[Última tentativa + novo ângulo]"
+---
+2. CONFIGURAÇÃO TÉCNICA
+- Trigger: [como configurar]
+- Delays: [tempo entre mensagens]
+M2: Fluxo CTA → Conteúdo → Oferta - IMPLEMENTAÇÃO COM...https://www.skool.com/backroom/classroom/848ce662?md=96419463f...
+2 of 407/12/2025, 22:04
+
+- Condicionais: [se abriu vs. não abriu]
+- Tags: [quais criar pra segmentar]
+3. PONTOS DE DECISÃO
+- Se abriu o conteúdo: [próximo passo]
+- Se não abriu: [mensagem de reativação]
+- Se clicou na oferta: [remove do fluxo]
+- Se comprou: [tag + remove do fluxo]
+4. SEQUÊNCIA ALTERNATIVA
+(se o conteúdo for vídeo ou aula)
+- Mensagem extra: "Já assistiu? O que achou?"
+- Engajamento antes de vender
+Começa me perguntando sobre o conteúdo gratuito e a oferta.
+Você vai receber:
+• Fluxo completo de 6 mensagens
+• Configuração técnica
+• Pontos de decisão e condicionais
+• Sequência alternativa se necessário
+1. "O tempo entre mensagens está errado"
+Diga: "Doug, ajusta os delays. Meu conteúdo é um [vídeo de X minutos / PDF de X páginas]. 
+Qual o tempo ideal entre cada mensagem?"
+2. "A transição pra oferta está forçada"
+Diga: "Doug, a passagem do conteúdo pra oferta está abrupta. Suaviza a transição. Quero 
+que pareça natural, não venda."
+M2: Fluxo CTA → Conteúdo → Oferta - IMPLEMENTAÇÃO COM...https://www.skool.com/backroom/classroom/848ce662?md=96419463f...
+3 of 407/12/2025, 22:04
+
+3. "Quero mais engajamento antes de vender"
+Diga: "Doug, adiciona mais etapas de engajamento. Quero interagir mais antes de 
+apresentar a oferta. Perguntas, enquetes, etc."
+4. "Preciso de fluxo pra quem não abriu o conteúdo"
+Diga: "Doug, cria um fluxo separado pra quem não abriu o conteúdo. Como reativo essas 
+pessoas?"
+5. "Quero um fluxo mais curto"
+Diga: "Doug, reduz pra 4 mensagens. Mantém a lógica: entrega + follow-up + oferta + última 
+chamada."
+�. "O conteúdo é uma aula ao vivo"
+Diga: "Doug, adapta o fluxo pra conteúdo ao vivo. Preciso de: lembrete antes, 
+acompanhamento durante, oferta depois."
+M2: Fluxo CTA → Conteúdo → Oferta - IMPLEMENTAÇÃO COM...https://www.skool.com/backroom/classroom/848ce662?md=96419463f...
+4 of 407/12/2025, 22:04
