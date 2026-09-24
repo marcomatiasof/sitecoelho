@@ -191,13 +191,11 @@
     </div>
   </header>
   <section class="hero" id="hero">
-    <div class="hero-slides" id="heroSlides">
-      <div class="hero-slide active"
-        style="background-image:url('assets/images/Chateau-Jardin-Vista-aerea-do-lazer-1.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('assets/images/Harmonie-Fachada-1920x1200_c.jpg')"></div>
-      <div class="hero-slide"
-        style="background-image:url('assets/images/Harmonie-Piscina-coberta-de-25m-com-raia.png')"></div>
-      <div class="hero-slide" style="background-image:url('assets/images/Harmonie-Lobby.png')"></div>
+        <div class="hero-video" style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:0;">
+      <video autoplay muted loop playsinline id="heroVideoBg" style="width:100%;height:100%;object-fit:cover;">
+        <source src="assets/video/empreendimento.mp4" type="video/mp4">
+      </video>
+      <button id="unmuteBtn" onclick="toggleMute()" aria-label="Ativar Som" style="position:absolute;bottom:40px;right:40px;background:rgba(0,0,0,0.5);color:#fff;border:1px solid rgba(255,255,255,0.3);border-radius:50%;width:50px;height:50px;cursor:pointer;z-index:10;font-size:1.2rem;backdrop-filter:blur(4px); transition:all 0.3s ease;">&#128263;</button>
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -219,14 +217,76 @@
         <a href="#sobre" class="btn-hero-outline">Conhe&#231;a o Projeto</a>
       </div>
     </div>
-    <div class="hero-dots" id="heroDots">
-      <button class="dot active" onclick="goToSlide(0)"></button>
-      <button class="dot" onclick="goToSlide(1)"></button>
-      <button class="dot" onclick="goToSlide(2)"></button>
-      <button class="dot" onclick="goToSlide(3)"></button>
-    </div>
+    
     <div class="hero-scroll-hint"><span>Role para descobrir</span>
       <div class="scroll-arrow"></div>
+    </div>
+  </section>
+  <section class="section-video" id="video">
+    <div class="video-overlay">
+      <span class="section-label light">O Filme</span>
+      <h2 class="video-title">Sinta o Ch&#226;teau Jardin</h2>
+      <p class="video-sub">Uma experi&#234;ncia visual do mais sofisticado lan&#231;amento do Cidade Jardim</p>
+      <button class="btn-play" onclick="openModal('modal-video')" aria-label="Assistir ao video">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </button>
+    </div>
+  </section>
+  <section class="section contato" id="contato">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-left reveal">
+          <span class="section-label">Exclusividade com hora marcada</span>
+          <h2 class="contato-title">Reserve sua visita<br>particular agora</h2>
+          <p>A equipe Quero Im&#243;veis J&#225; est&#225; &#224; disposi&#231;&#227;o para apresentar cada detalhe do Ch&#226;teau Jardin em uma
+            visita exclusiva e personalizada.</p>
+          <div class="contato-beneficios">
+            <div class="cb-item"><span>&#10003;</span>Visita particular sem pressa</div>
+            <div class="cb-item"><span>&#10003;</span>Apresenta&#231;&#227;o do apartamento decorado</div>
+            <div class="cb-item"><span>&#10003;</span>Simula&#231;&#227;o de financiamento personalizada</div>
+            <div class="cb-item"><span>&#10003;</span>Atendimento exclusivo com Quero Im&#243;veis J&#225;</div>
+          </div>
+          <div class="contato-social">
+            <p>Ou fale diretamente com Quero Im&#243;veis J&#225;:</p>
+            <a href="tel:+5511969155717" class="social-link phone">&#9742; (11) 96915-5717</a>
+            <a href="https://wa.me/5511969155717?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+visita+ao+Ch%C3%A2teau+Jardin."
+              target="_blank" rel="noopener" class="social-link whatsapp">&#128172; WhatsApp (11) 96915-5717</a>
+          </div>
+        </div>
+        <div class="contato-form-wrap reveal">
+          <form class="contato-form" id="formContato" onsubmit="handleSubmit(event,'contato')">
+            <div class="form-header">
+              <h3>Agende sua Visita</h3>
+              <p>Resposta em at&#233; 1 hora &#250;til</p>
+            </div>
+            <div class="form-group"><label for="c-nome">Nome completo *</label><input type="text" id="c-nome"
+                name="nome" placeholder="Seu nome" required></div>
+            <div class="form-row two">
+              <div class="form-group"><label for="c-email">E-mail *</label><input type="email" id="c-email" name="email"
+                  placeholder="seu@email.com" required></div>
+              <div class="form-group"><label for="c-tel">Telefone / WhatsApp *</label><input type="tel" id="c-tel"
+                  name="telefone" placeholder="(11) 99999-9999" required></div>
+            </div>
+            <div class="form-group"><label for="c-int">Tipologia de interesse</label>
+              <select id="c-int" name="tipologia">
+                <option value="">Selecione...</option>
+                <option value="Harmonie 185m² – 3 Suítes">Harmonie 185m&#178; &#8211; 3 Su&#237;tes</option>
+                <option value="Harmonie 215m² – 3/4 Suítes">Harmonie 215m&#178; &#8211; 3/4 Su&#237;tes</option>
+                <option value="Harmonie 248m² – 4 Suítes">Harmonie 248m&#178; &#8211; 4 Su&#237;tes</option>
+                <option value="Lumière 355m² – Premium">Lumi&#232;re 355m&#178; &#8211; Premium</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="c-msg">Mensagem</label><textarea id="c-msg" name="mensagem" rows="3"
+                placeholder="Quando prefere visitar? Alguma d&#250;vida?"></textarea></div>
+            <div class="form-check"><input type="checkbox" id="c-lgpd" required><label for="c-lgpd">Autorizo contato
+                conforme a <button type="button" onclick="openModal('modal-privacidade')"
+                  class="link-privacy">Pol&#237;tica de Privacidade</button>.</label></div>
+            <button type="submit" class="btn-submit">Agendar Minha Visita &#8594;</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
   <section class="section sobre" id="sobre">
@@ -270,7 +330,111 @@
       </div>
     </div>
   </section>
-  
+  <section class="section signature" id="signature">
+    <div class="signature-bg"><img src="assets/images/CJ-decor-harmonie-1-2-1920x1200_c.jpg"
+        alt="Ambiente Signature Chateau Jardin" loading="lazy"></div>
+    <div class="signature-overlay">
+      <div class="container">
+        <div class="signature-content reveal">
+          <span class="section-label light">Exclusividade Total</span>
+          <h2 class="signature-title">CH&#194;TEAU JARDIN<br><em>SIGNATURE</em></h2>
+          <p class="signature-sub">Exclusividade e conforto sob medida. Um servi&#231;o &#250;nico de
+            personaliza&#231;&#227;o que transforma seu apartamento em uma experi&#234;ncia verdadeiramente autoral.</p>
+          <div class="signature-benefits">
+            <div class="sig-benefit"><span class="sig-check">&#10003;</span>
+              <div><strong>Atendimento Individual Presencial</strong>
+                <p>Assist&#234;ncia exclusiva do time de arquitetura das incorporadoras</p>
+              </div>
+            </div>
+            <div class="sig-benefit"><span class="sig-check">&#10003;</span>
+              <div><strong>Escolha ou Mescla de Plantas</strong>
+                <p>Defini&#231;&#227;o entre plantas pr&#233;-definidas ou mescla de ambientes, sem &#244;nus</p>
+              </div>
+            </div>
+            <div class="sig-benefit"><span class="sig-check">&#10003;</span>
+              <div><strong>Ajustes Exclusivos de Acabamento</strong>
+                <p>Possibilidade de ajustes em alvenarias, pisos e revestimentos</p>
+              </div>
+            </div>
+            <div class="sig-benefit"><span class="sig-check">&#10003;</span>
+              <div><strong>Servi&#231;os de Alto Padr&#227;o Inclusos</strong>
+                <p>Courrier, Concierge e manuten&#231;&#227;o da quadra de saibro arcados pela incorporadora*</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn-hero-primary" onclick="openModal('modal-visita')">Conhecer o Programa Signature</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section diferenciais" id="diferenciais">
+    <div class="container">
+      <span class="section-label light reveal">Padr&#227;o Ch&#226;teau Jardin</span>
+      <h2 class="section-title light center reveal">Diferenciais Construtivos</h2>
+      <div class="dif-grid reveal">
+        <div class="dif-card">
+          <div class="dif-icon">&#127959;</div>
+          <h4>Alto Padr&#227;o Construtivo</h4>
+          <p>Arquitetura cl&#225;ssica-atemporal com projeto assinado internacionalmente</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#9889;</div>
+          <h4>Gerador Full</h4>
+          <p>Energia garantida para todas as unidades, &#225;reas comuns e seguran&#231;a</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#128272;</div>
+          <h4>Hall Social Privativo</h4>
+          <p>Porta pivotante com fechadura social e biometria por unidade</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#128733;</div>
+          <h4>C&#243;digo nos Elevadores</h4>
+          <p>Elevadores sociais com c&#243;digo de seguran&#231;a por andar &#8212; privacidade total</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#10052;</div>
+          <h4>Infraestrutura AC</h4>
+          <p>Rede frigor&#237;fica no living, jantar, home theater e su&#237;tes</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#129695;</div>
+          <h4>Caixilhos Especiais</h4>
+          <p>Alum&#237;nio cor p&#233;rola, persiana integrada e tratamento ac&#250;stico na su&#237;te master</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#128225;</div>
+          <h4>Wi-Fi Maximizado</h4>
+          <p>Projeto de tecnologia para maximiza&#231;&#227;o do sinal em toda a unidade</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#128247;</div>
+          <h4>Churrasqueira a G&#225;s</h4>
+          <p>Previs&#227;o para coifa e churrasqueira a g&#225;s no terra&#231;o</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#128266;</div>
+          <h4>Isolamento Ac&#250;stico</h4>
+          <p>Isolamento entre pisos para amenizar ru&#237;dos de impacto</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#128161;</div>
+          <h4>Ilumina&#231;&#227;o C&#234;nica</h4>
+          <p>Infraestrutura para ilumina&#231;&#227;o c&#234;nica no living e terra&#231;o</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#128663;</div>
+          <h4>Garagem Alto Padr&#227;o</h4>
+          <p>Laje nervurada envernizada, piso granilite, paredes revestidas</p>
+        </div>
+        <div class="dif-card">
+          <div class="dif-icon">&#127968;</div>
+          <h4>&#193;reas Comuns Decoradas</h4>
+          <p>Todos os espa&#231;os comuns entregues decorados e mobiliados</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="section galeria" id="galeria">
     <div class="container">
       <span class="section-label reveal">Perspectivas</span>
@@ -454,91 +618,6 @@
       <button class="carousel-btn next" onclick="moveCarousel('ambTrack','next')" aria-label="Pr&#243;ximo">&#8250;</button>
     </div>
   </section>
-  <section class="section diferenciais" id="diferenciais">
-    <div class="container">
-      <span class="section-label light reveal">Padr&#227;o Ch&#226;teau Jardin</span>
-      <h2 class="section-title light center reveal">Diferenciais Construtivos</h2>
-      <div class="dif-grid reveal">
-        <div class="dif-card">
-          <div class="dif-icon">&#127959;</div>
-          <h4>Alto Padr&#227;o Construtivo</h4>
-          <p>Arquitetura cl&#225;ssica-atemporal com projeto assinado internacionalmente</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#9889;</div>
-          <h4>Gerador Full</h4>
-          <p>Energia garantida para todas as unidades, &#225;reas comuns e seguran&#231;a</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#128272;</div>
-          <h4>Hall Social Privativo</h4>
-          <p>Porta pivotante com fechadura social e biometria por unidade</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#128733;</div>
-          <h4>C&#243;digo nos Elevadores</h4>
-          <p>Elevadores sociais com c&#243;digo de seguran&#231;a por andar &#8212; privacidade total</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#10052;</div>
-          <h4>Infraestrutura AC</h4>
-          <p>Rede frigor&#237;fica no living, jantar, home theater e su&#237;tes</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#129695;</div>
-          <h4>Caixilhos Especiais</h4>
-          <p>Alum&#237;nio cor p&#233;rola, persiana integrada e tratamento ac&#250;stico na su&#237;te master</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#128225;</div>
-          <h4>Wi-Fi Maximizado</h4>
-          <p>Projeto de tecnologia para maximiza&#231;&#227;o do sinal em toda a unidade</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#128247;</div>
-          <h4>Churrasqueira a G&#225;s</h4>
-          <p>Previs&#227;o para coifa e churrasqueira a g&#225;s no terra&#231;o</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#128266;</div>
-          <h4>Isolamento Ac&#250;stico</h4>
-          <p>Isolamento entre pisos para amenizar ru&#237;dos de impacto</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#128161;</div>
-          <h4>Ilumina&#231;&#227;o C&#234;nica</h4>
-          <p>Infraestrutura para ilumina&#231;&#227;o c&#234;nica no living e terra&#231;o</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#128663;</div>
-          <h4>Garagem Alto Padr&#227;o</h4>
-          <p>Laje nervurada envernizada, piso granilite, paredes revestidas</p>
-        </div>
-        <div class="dif-card">
-          <div class="dif-icon">&#127968;</div>
-          <h4>&#193;reas Comuns Decoradas</h4>
-          <p>Todos os espa&#231;os comuns entregues decorados e mobiliados</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section tour" id="tour">
-    <div class="container">
-      <span class="section-label reveal">Experi&#234;ncia Imersiva</span>
-      <h2 class="section-title center reveal">Tour Virtual 360&#176;</h2>
-      <p class="section-sub center reveal">Explore o Ch&#226;teau Jardin sem sair de onde voc&#234; est&#225;</p>
-      <div class="tour-frame reveal">
-        <iframe src="https://arquivos.tegraincorporadora.com.br/tour360/chateaujardin/"
-          title="Tour Virtual 360 Chateau Jardin" frameborder="0" allowfullscreen loading="lazy"></iframe>
-        <div class="tour-overlay" id="tourOverlay" onclick="startTour()">
-          <div class="tour-play-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
-            </svg></div>
-          <p>Clique para iniciar o Tour Virtual 360&#176;</p>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="section plantas" id="plantas">
     <div class="container">
       <span class="section-label reveal">Tipologias</span>
@@ -609,39 +688,19 @@
       </div>
     </div>
   </section>
-  <section class="section signature" id="signature">
-    <div class="signature-bg"><img src="assets/images/CJ-decor-harmonie-1-2-1920x1200_c.jpg"
-        alt="Ambiente Signature Chateau Jardin" loading="lazy"></div>
-    <div class="signature-overlay">
-      <div class="container">
-        <div class="signature-content reveal">
-          <span class="section-label light">Exclusividade Total</span>
-          <h2 class="signature-title">CH&#194;TEAU JARDIN<br><em>SIGNATURE</em></h2>
-          <p class="signature-sub">Exclusividade e conforto sob medida. Um servi&#231;o &#250;nico de
-            personaliza&#231;&#227;o que transforma seu apartamento em uma experi&#234;ncia verdadeiramente autoral.</p>
-          <div class="signature-benefits">
-            <div class="sig-benefit"><span class="sig-check">&#10003;</span>
-              <div><strong>Atendimento Individual Presencial</strong>
-                <p>Assist&#234;ncia exclusiva do time de arquitetura das incorporadoras</p>
-              </div>
-            </div>
-            <div class="sig-benefit"><span class="sig-check">&#10003;</span>
-              <div><strong>Escolha ou Mescla de Plantas</strong>
-                <p>Defini&#231;&#227;o entre plantas pr&#233;-definidas ou mescla de ambientes, sem &#244;nus</p>
-              </div>
-            </div>
-            <div class="sig-benefit"><span class="sig-check">&#10003;</span>
-              <div><strong>Ajustes Exclusivos de Acabamento</strong>
-                <p>Possibilidade de ajustes em alvenarias, pisos e revestimentos</p>
-              </div>
-            </div>
-            <div class="sig-benefit"><span class="sig-check">&#10003;</span>
-              <div><strong>Servi&#231;os de Alto Padr&#227;o Inclusos</strong>
-                <p>Courrier, Concierge e manuten&#231;&#227;o da quadra de saibro arcados pela incorporadora*</p>
-              </div>
-            </div>
-          </div>
-          <button class="btn-hero-primary" onclick="openModal('modal-visita')">Conhecer o Programa Signature</button>
+  <section class="section tour" id="tour">
+    <div class="container">
+      <span class="section-label reveal">Experi&#234;ncia Imersiva</span>
+      <h2 class="section-title center reveal">Tour Virtual 360&#176;</h2>
+      <p class="section-sub center reveal">Explore o Ch&#226;teau Jardin sem sair de onde voc&#234; est&#225;</p>
+      <div class="tour-frame reveal">
+        <iframe src="https://arquivos.tegraincorporadora.com.br/tour360/chateaujardin/"
+          title="Tour Virtual 360 Chateau Jardin" frameborder="0" allowfullscreen loading="lazy"></iframe>
+        <div class="tour-overlay" id="tourOverlay" onclick="startTour()">
+          <div class="tour-play-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+            </svg></div>
+          <p>Clique para iniciar o Tour Virtual 360&#176;</p>
         </div>
       </div>
     </div>
@@ -763,71 +822,6 @@
       </div>
     </div>
   </section>
-  <section class="section contato" id="contato">
-    <div class="container">
-      <div class="contato-grid">
-        <div class="contato-left reveal">
-          <span class="section-label">Exclusividade com hora marcada</span>
-          <h2 class="contato-title">Reserve sua visita<br>particular agora</h2>
-          <p>A equipe Quero Im&#243;veis J&#225; est&#225; &#224; disposi&#231;&#227;o para apresentar cada detalhe do Ch&#226;teau Jardin em uma
-            visita exclusiva e personalizada.</p>
-          <div class="contato-beneficios">
-            <div class="cb-item"><span>&#10003;</span>Visita particular sem pressa</div>
-            <div class="cb-item"><span>&#10003;</span>Apresenta&#231;&#227;o do apartamento decorado</div>
-            <div class="cb-item"><span>&#10003;</span>Simula&#231;&#227;o de financiamento personalizada</div>
-            <div class="cb-item"><span>&#10003;</span>Atendimento exclusivo com Quero Im&#243;veis J&#225;</div>
-          </div>
-          <div class="contato-social">
-            <p>Ou fale diretamente com Quero Im&#243;veis J&#225;:</p>
-            <a href="tel:+5511969155717" class="social-link phone">&#9742; (11) 96915-5717</a>
-            <a href="https://wa.me/5511969155717?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+visita+ao+Ch%C3%A2teau+Jardin."
-              target="_blank" rel="noopener" class="social-link whatsapp">&#128172; WhatsApp (11) 96915-5717</a>
-          </div>
-        </div>
-        <div class="contato-form-wrap reveal">
-          <form class="contato-form" id="formContato" onsubmit="handleSubmit(event,'contato')">
-            <div class="form-header">
-              <h3>Agende sua Visita</h3>
-              <p>Resposta em at&#233; 1 hora &#250;til</p>
-            </div>
-            <div class="form-group"><label for="c-nome">Nome completo *</label><input type="text" id="c-nome"
-                name="nome" placeholder="Seu nome" required></div>
-            <div class="form-row two">
-              <div class="form-group"><label for="c-email">E-mail *</label><input type="email" id="c-email" name="email"
-                  placeholder="seu@email.com" required></div>
-              <div class="form-group"><label for="c-tel">Telefone / WhatsApp *</label><input type="tel" id="c-tel"
-                  name="telefone" placeholder="(11) 99999-9999" required></div>
-            </div>
-            <div class="form-group"><label for="c-int">Tipologia de interesse</label>
-              <select id="c-int" name="tipologia">
-                <option value="">Selecione...</option>
-                <option value="Harmonie 185m² – 3 Suítes">Harmonie 185m&#178; &#8211; 3 Su&#237;tes</option>
-                <option value="Harmonie 215m² – 3/4 Suítes">Harmonie 215m&#178; &#8211; 3/4 Su&#237;tes</option>
-                <option value="Harmonie 248m² – 4 Suítes">Harmonie 248m&#178; &#8211; 4 Su&#237;tes</option>
-                <option value="Lumière 355m² – Premium">Lumi&#232;re 355m&#178; &#8211; Premium</option>
-              </select>
-            </div>
-            <div class="form-group"><label for="c-msg">Mensagem</label><textarea id="c-msg" name="mensagem" rows="3"
-                placeholder="Quando prefere visitar? Alguma d&#250;vida?"></textarea></div>
-            <div class="form-check"><input type="checkbox" id="c-lgpd" required><label for="c-lgpd">Autorizo contato
-                conforme a <button type="button" onclick="openModal('modal-privacidade')"
-                  class="link-privacy">Pol&#237;tica de Privacidade</button>.</label></div>
-            <button type="submit" class="btn-submit">Agendar Minha Visita &#8594;</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
   <section class="section outros" id="outros">
     <div class="container">
       <span class="section-label reveal">Portf&#243;lio Exclusivo</span>
